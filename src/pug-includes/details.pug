@@ -1,0 +1,122 @@
+- var pageTitle = product.name + ' @ Famous Soda'
+doctype html
+head
+  include ../pug-includes/head.pug
+body#page-top
+  #bubblesContainer
+  #wrap
+    include ../pug-includes/menu.pug
+    include ../pug-includes/shop.pug
+    // main soda content
+    section#details.soda-section(class='bg-'+product.code)
+      .container
+        .row
+          .col-lg-7.col-md-12.col-sm-12.info
+            h1.product-header= product.name
+            h2= product.slogan
+            p= product.description
+            .cart-menu(data-uuid=product.code)
+              p.free-shipping FREE SHIPPING*
+              .row
+                .col.item 12 pack
+                .col.price $39.99
+              .tool.row.no-gutters
+                .col-2
+                  button.rem(type='button') -
+                .col-8.total 1
+                .col-2 
+                  button.add(type="button") +
+              button.btn-gold(type='button') ADD TO CART
+            p
+              small *$5 surcharge amay be applied at checkout for regional areas
+          .col-lg-5.col-md-12.col-sm-12.video
+            video(autoplay='autoplay' loop)
+              source(src='assets/videos/'+product.code+'-sm.mp4', type='video/mp4').sizing
+    // why famous WHITE
+    section#whyFamous.soda-section
+      .container
+          .row
+            .col-12.info
+              h1 WHY FAMOUS?
+              .row.mt-4
+                .col-lg-3.col-xl-3.col-6
+                  img(src='assets/images/zero-sugar.svg')
+                  h4 Zero sugar
+                  p All of our sodas are sugar free. That’s right, they’re sweet enough. Thanks to the natural sweeteners we use derived from fabulous fruits.
+                .col-lg-3.col-xl-3.col-6
+                  img(src='assets/images/natural.svg')
+                  h4 100% Natural
+                  p At the Famous Soda Co., we don’t do fake. Nasty additives and preservatives do not get past security, we can promise you that
+                .col-lg-3.col-xl-3.col-6
+                  img(src='assets/images/australian-made.svg')
+                  h4 Australian Made
+                  p Kylie, Hugh, Nicole... We love our famous Australians. And that’s why all our sodas are made right here on Australian soil.
+                .col-lg-3.col-xl-3.col-6
+                  img(src='assets/images/8-calories.svg')
+                  h4 Only 8 Calories
+                  p Famous Soda Co. does not endorse any behaviour that denies oneself from pleasure. Which is why all our drinks contain a teensy 8 calories per serve.
+    section#facts.soda-section(class='bg-'+product.code)
+      .container
+        .row
+          .col-lg-7.col-md-12.col-sm-12.info
+            h1 FAMOUS FACTS
+            .row.table-gold
+              .col.title Nutritional Information
+              .col.title Servings per Package:1
+              .col.title
+                | Serving Size:
+                br
+                | 330ml
+            .row.table-gold
+              .col-8.title.text-right Avg Qty per Serving
+              .col.title Avg Qty per 100ml
+            .row.table-gold
+              .col Energy
+              .col 33 kJ
+              .col 10 kJ
+            .row.table-gold
+              .col Energy
+              .col 33 kJ
+              .col 10 kJ
+            .row.table-gold
+              .col Protein
+              .col 0mg
+              .col 0mg
+            .row.table-gold
+              .col Fat, total
+              .col 0mg
+              .col 0mg
+            .row.table-gold
+              .col &nbsp; - Saturated
+              .col 0mg
+              .col 0mg
+            .row.table-gold
+              .col Carbohydrate
+              .col 0mg
+              .col 0mg
+            .row.table-gold
+              .col &nbsp; - Sugars
+              .col 0mg
+              .col 0mg
+            .row.table-gold
+              .col Sodium
+              .col 1mg
+              .col 0mg
+            .row.table-gold.text-center
+              .col % Daily intakes are based on an average adult diet of 8700kJ
+            br
+            .row.table-gold
+              .col.title Our Famous Ingredients
+            .row.table-gold
+              .col= product.ingredients
+          .col-lg-5.col-md-12.col-sm-12.video
+            video(autoplay='autoplay' loop)
+              source(src='assets/videos/'+product.code+'2-sm.mp4', type='video/mp4').sizing
+    include ../pug-includes/footer.pug
+  // Bootstrap core JS
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
+  // Third party plugin JS
+  script(src='https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js')
+  script(src='js/scripts.min.js')
+  include ../pug-includes/google-analytics.pug

@@ -1,0 +1,21 @@
+#sideMenu
+  a.closebtn.golden-text &times;
+  a.stars THE STARS
+  a(href='blood-orange.html') Blood Orange
+  a(href='pink-lemonade.html') Pink Lemonade
+  a(href='passion-fruit.html') Passionfruit
+  a(href='lemon.html') Lemon
+  a(href='ginger-beer.html') Ginger Beer
+  br
+  a(href='index.html').stars HOME
+// Navigation
+nav#mainNav.navbar.fixed-top
+  .container
+    button#openMenu.navbar-toggler(type='button')
+      svg.svg-inline--fa.fa-bars.fa-w-14(aria-hidden='true' focusable='false' data-prefix='fas' data-icon='bars' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 448 512' data-fa-i2svg='')
+        path(fill='currentColor2' d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z')
+    a.navbar-brand.js-scroll-trigger(href='index.html#page-top')
+      img(src="assets/images/logo.png")
+    button#openCart.navbar-toggler.navbar-toggler-right(type='button')
+      img(src='assets/images/shopping-star-off.gif' style='zoom:1.5')
+      span.itemsInCart

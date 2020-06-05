@@ -1,0 +1,56 @@
+
+html,body {
+	height: 100%!important;
+}
+
+// Global styling for this template
+body {
+    overflow-x: hidden;
+}
+
+p {
+    line-height: 1.4;
+}
+
+
+::-moz-selection {
+    background: $primary;
+    text-shadow: none;
+}
+
+::selection {
+    background: $primary;
+    text-shadow: none;
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+
+.bg-pink-lemonade { background-color: #F8BBD6!important; }
+.bg-blood-orange { background-color: #F47D4A!important; }
+.bg-passion-fruit { background-color: #FBAF56!important; }
+.bg-ginger-beer { background-color: #EDC87C!important; }
+.bg-lemon { background-color: #FFED67!important; }
+.bg-family-pack { background-color: white!important; }
+.bg-want-you { background-color: #FBF7F5!important; }
+.bg-white { background-color: white!important; }
+.bg-light { background-color: #FBF7F5!important; }
+
+/* in body won't work ¯\_(ツ)_/¯ */
+html {
+	scroll-snap-type: y mandatory;
+}
+
+.hidden {
+	display: none;
+}
+
+button:focus {
+	outline: 0px!important;
+}

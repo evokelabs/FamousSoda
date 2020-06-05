@@ -1,0 +1,101 @@
+
+#sideShop {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4000!important;
+    top: 0;
+    right: 0;
+    background-color: rgba(255,255,255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    a {
+        font-family: "Zwizz ExtraBold";
+        font-size: 1.4rem;
+        line-height: 1.5;
+        color: black;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        opacity: 1;
+        cursor: pointer;
+		border-bottom: 2px solid black;
+
+        margin-left:50px;
+        @include media-breakpoint-down(md) {
+            margin-left:0;
+            svg {
+                margin-left:10px;
+            }
+        }
+
+    }
+    a:hover {
+        color: black;
+    }
+
+    .itemLine {
+        padding-top:5px;
+        margin-left:50px;
+        @include media-breakpoint-down(md) {
+            margin-left:0;
+            .row {
+                padding-left:10px;
+            }
+        }
+
+        font-family: "Zwizz SemiBold";
+        font-size: 1.4rem;
+
+        .product {
+            .remove {
+                text-align:right;
+                margin-top: 3pt;
+                margin-right: 3pt;
+                line-height: 0.5;
+                font-size: 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+    .spacer {
+        margin: 0;
+        padding:0;
+        height: 2px;
+        background-color: black;
+    }
+    
+    .subTotal {
+        margin-left:50px;
+        @include media-breakpoint-down(md) {
+            margin-left:none;
+            margin-right:none;
+            h2 {
+                width: 100%;
+                display:block;
+            }
+        }
+        h2 {
+            font-family: "Zwizz ExtraBold";
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            line-height: 1.5;
+        }
+        .btn-gold { 
+            margin-top: 0;
+        }
+        position: absolute;
+        bottom: 5pt;
+    }
+    .hidden {
+        display:none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    #sideShop {padding-top: 15px;}
+    #sideShop a {font-size: 18px;}
+}

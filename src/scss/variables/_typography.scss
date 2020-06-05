@@ -1,0 +1,32 @@
+// Override Bootstrap typography variables
+
+$font-family-base: "FSoda-Regular", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-family: "Zwizz ExtraBold", "Montserrat", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$subheadings-font-family: "FSoda-SemiBold", "Droid Serif", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-family-script: "FSoda-Regular", "Kaushan Script", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$headings-font-weight: 700;
+$headings-letter-spacing: 0.0625em;
+
+.dot-star {
+	margin-left: 3px;
+	font-size: small;
+}
+
+.golden-text {
+    /* https://cssgradient.io/ */
+    background: -webkit-linear-gradient(30deg, rgba(97,65,39,1) 0%, rgba(114,81,45,1) 8%, rgba(161,128,61,1) 16%, rgba(234,204,142,1) 26%, rgba(234,204,142,1) 38%, rgba(136,103,53,1) 45%, rgba(208,175,106,1) 52%, rgba(139,90,53,1) 64%, rgba(198,164,120,1) 75%, rgba(164,135,80,1) 84%, rgba(172,140,75,1) 93%, rgba(97,65,39,1) 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

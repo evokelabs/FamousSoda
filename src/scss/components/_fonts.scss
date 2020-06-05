@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'Zwizz Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Zwizz Regular'), url('../assets/fonts/Zwizz-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Zwizz SemiBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Zwizz SemiBold'), url('../assets/fonts/Zwizz-SemiBold.woff') format('woff');
+}	
+@font-face {
+	font-family: 'Zwizz ExtraBold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Zwizz ExtraBold'), url('../assets/fonts/Zwizz-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FSoda-Regular';
+  src:
+    url('../assets/fonts/FSoda-Regular.ttf?11zrtr') format('truetype'),
+    url('../assets/fonts/FSoda-Regular.woff?11zrtr') format('woff'),
+    url('../assets/fonts/FSoda-Regular.svg?11zrtr#FSoda-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'FSoda-ExtraBold';
+  src:
+    url('../assets/fonts/FSoda-ExtraBold.ttf?9hcj0r') format('truetype'),
+    url('../assets/fonts/FSoda-ExtraBold.woff?9hcj0r') format('woff'),
+    url('../assets/fonts/FSoda-ExtraBold.svg?9hcj0r#FSoda-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'FSoda-SemiBold';
+  src:
+    url('../assets/fonts/FSoda-SemiBold.ttf?z194ck') format('truetype'),
+    url('../assets/fonts/FSoda-SemiBold.woff?z194ck') format('woff'),
+    url('../assets/fonts/FSoda-SemiBold.svg?z194ck#FSoda-SemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

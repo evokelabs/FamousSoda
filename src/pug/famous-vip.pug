@@ -1,0 +1,105 @@
+- var pageTitle = 'Famous Soda'
+doctype html
+head
+  include ../pug-includes/head.pug
+body#page-top
+  #bubblesContainer
+  #wrap
+    include ../pug-includes/menu.pug
+    include ../pug-includes/shop.pug
+    // First Blocks
+    section#you.soda-section.bg-blood-orange.aligned
+      .container
+        .row
+          .col-lg-7.col-md-12.col-sm-12.info
+            h1 JOIN US!
+            h2 If you have dreams of fame and fortune (let’s face it, who doesn’t?), we want to hear from you.
+            p We’re pulling back the curtain on the VIP area, and are on the hunt for anyone who has what it takes to be a face of Famous.
+            p What if we told you that you could make money by selling Famous soda, without ever leaving your palace? True stars should have the luxury of working in comfort and style, naturally. Selling sugar-free, delicious soda to your network, and getting paid to do it. We know, we know, we’re too good to you.
+          .col-lg-5.col-md-12.col-sm-12.video.blk
+            video(autoplay='autoplay' loop)
+                source(src='/assets/videos/family-pack-xl.mp4', type='video/mp4')
+    section.soda-section.bg-passion-fruit
+      .container
+        .row
+          .col-lg-6.col-md-12.col-sm-12.info
+            h1.product-header THE ROLE.
+            p It’s simple and the best bit is, we don’t want you to leave comfort or safety of your home.
+            p You will be selling our sodalicious Famous Sodas that have zero sugar, are 100% natural, Australian made and only 8 calories a bottle. If you haven’t had the pleasure of tasting one of our Famous Sodas, then you don’t know what you’re missing.
+            p All you need to do is pick up the phone or jump onto the gram and start selling our Famous Sodas to your network, and we’ll do the rest.
+          .col-lg-6.col-md-12.col-sm-12.info
+            h1.product-header UNCAPPED EARNINGS.
+            p You will receive $5 for every case ordered and your customers will also recieve a $5 discount at purchase through our online store.
+            p And there’s the sweet spot (with zero sugar of course) because you continue to earn $5 a case every time they re-order.
+            p At the end of each month we will tally up the scores and you will be paid to your nominated bank account through your ABN.
+    section#whyFamous.soda-section.bg-pink-lemonade
+      .container
+          .row
+            .col-12.info
+              h1 HOW TO GET STARTED.
+              .row.mt-4
+                .col
+                  h4 STEP 01
+                  p To apply, tell us in 500 words why you’ve earned your spot in the Famous line-up, and we’ll be in touch. Honesty and creativity mandatory, humility and modesty optional.
+              .row.mt-4
+                .col
+                  h4 STEP 02
+                  p You will need an ABN number, if you don’t have one it takes 5 minutes to apply online <a href="https://abnregistry.org/registration-form/">here</a>
+              .row.mt-4
+                .col
+                  h4 STEP 03
+                  p Once we’ve reviewed applications, we will be in touch with you on next steps via email. To get started we offer a mixed case for $40.00 delivered to your door so you can taste, test and share with your friends.
+              .row.mt-4
+                .col
+                  h4 STEP 04
+                  p You will be assigned a unique code for your customers to use at check out. This code will give you $5 from every case sold. Your customer will recieve $5 off their order. Win, win for everybody.
+              .row.mt-4
+                .col 
+                  h4 STEP 05
+                  p Share your code and start selling. We can offer you a range of creative assets and imagery to use on social media to help you along the way.
+    section#apply-vip.soda-section.bg-ginger-beer
+      .container
+        .row
+          .col.info
+            h1 APPLY NOW.
+            p
+              strong Consider this your golden ticket to soda royalty.
+            #mc_embed_signup
+              form#mc-embedded-subscribe-form.validate(action='https://famoussodaco.us12.list-manage.com/subscribe/post?u=da4a1b4bd46096e992e2fe7f2&id=d904db5485' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+                #mc_embed_signup_scroll
+                  .row
+                    .col-md-6.col-12.mt-4.mc-field-group
+                      input#mce-FNAME.form-control.required(type='text' placeholder='FIRST NAME' name='FNAME')
+                    .col-md-6.col-12.mt-4.mc-field-group
+                      input#mce-LNAME.form-control.required(type='text' placeholder='LAST NAME' value='' name='LNAME')
+                    .col-md-6.col-12.mt-4.mc-field-group
+                      input#mce-EMAIL.form-control.required(type='email' name='EMAIL' placeholder='EMAIL')
+                    .col-md-6.col-12.mt-4.mc-field-group
+                      input#mce-MMERGE6.form-control.required(type='text' placeholder='PHONE NUMBER' value='' name='MMERGE6')
+                    .col-md-6.col-12.mt-4.mc-field-group
+                      input#mce-MMERGE5.form-control(type='text' placeholder='ABN / TAX CODE' value='' name='MMERGE5')
+                    .col-md-6.col-12.mt-4.mc-field-group
+                      input#mce-MMERGE4.form-control.required(type='text' placeholder='SOCIAL MEDIA ACCOUNT' name='MMERGE4')
+                    .col-12.mt-4.mc-field-group
+                      input#mce-MMERGE3.form-control(type='text' placeholder='ADDRESS' value='' maxlength='70' name='MMERGE3')
+                    .col-12.mt-4.mc-field-group
+                      textarea#mce-MMERGE7.form-control.required(rows='6' placeholder='TELL US IN 500 WORDS OR LESS WHY YOU WOULD LIKE TO WORK WITH FAMOUS' name='MMERGE7')
+                  #mce-responses.clear
+                    #mce-error-response.response(style='display:none')
+                    #mce-success-response.response(style='display:none')
+                  // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                  div(style='position: absolute; left: -5000px;' aria-hidden='true')
+                    input(type='text' name='b_da4a1b4bd46096e992e2fe7f2_d904db5485' tabindex='-1' value='')
+                  .clear.text-right.mt-4
+                    input#mc-embedded-subscribe.btn-gold(type='submit' value='SUBMIT' name='SUBMIT')
+    include ../pug-includes/footer.pug
+  // Bootstrap core JS
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
+  script(src='https://sdks.shopifycdn.com/buy-button/1.0.0/buybutton.js')
+  script(src='/js/scripts.min.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwtDDKGr4RBcB8diupkpR3Rkhq2f4yF8g&callback=mapInit&libraries=geometry,places')
+  script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+  script(type='text/javascript').
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[6]='MMERGE6';ftypes[6]='text';fnames[5]='MMERGE5';ftypes[5]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[3]='MMERGE3';ftypes[3]='address';fnames[7]='MMERGE7';ftypes[7]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+  include ../pug-includes/google-analytics.pug

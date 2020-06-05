@@ -1,0 +1,51 @@
+{
+  "name": "famous-soda-web",
+  "version": "1.2.2",
+  "description": "Famous Soda Website",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+    "build:assets": "node scripts/build-assets.js",
+    "build:pug": "node scripts/build-pug.js",
+    "build:scripts": "node scripts/build-scripts.js",
+    "build:scss": "node scripts/build-scss.js",
+    "release": "npm run clean && npm run build && node scripts/build-release.js && node scripts/start-release.js",
+    "clean": "node scripts/clean.js",
+    "start": "npm run build && node scripts/start.js",
+    "start:debug": "npm run build && node scripts/start-debug.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3bb0/famous-soda-website.git"
+  },
+  "keywords": [
+    "famous",
+    "soda"
+  ],
+  "author": "Alberto bebbo Capponi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b3bb0/famous-soda-website/issues"
+  },
+  "homepage": "https://www.famoussodaco.com",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.0",
+    "shopify-buy": "^2.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.7.6",
+    "browser-sync": "2.26.7",
+    "chokidar": "3.3.1",
+    "clean-css": "^4.2.3",
+    "concurrently": "5.1.0",
+    "node-minify": "^3.6.0",
+    "postcss": "7.0.27",
+    "prettier": "2.0.4",
+    "pug": "2.0.4",
+    "sass": "1.26.3",
+    "shelljs": "0.8.3",
+    "uglify-es": "^3.3.9"
+  }
+}

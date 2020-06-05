@@ -1,0 +1,24 @@
+// Import variables
+@import "./variables.scss";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap.scss";
+
+// Global CSS
+@import "./global.scss";
+
+// Components
+@import "./components/buttons.scss";
+@import "./components/forms.scss";
+@import "./components/navbar.scss";
+@import "./components/fonts.scss";
+@import "./components/tables.scss";
+
+// Sections
+@import "./sections/footer.scss";
+@import "./sections/home.scss";
+@import "./sections/details.scss";
+@import "./sections/stores.scss";
+@import "./sections/shop.scss";
+
+@import "./soda.scss";

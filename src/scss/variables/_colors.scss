@@ -1,0 +1,16 @@
+// Override Bootstrap color system
+
+$orange: #F47D4A;
+$pink: #F8BBD6;
+$passion: #FBAF56;
+$ginger: #EDC87C;
+$lemon: #FFED67;
+$bground: #FBF7F5;
+
+// Override Bootstrap default state colors
+
+$primary: $orange;
+
+// Override Bootstrap yiq lightness value
+
+$yiq-contrasted-threshold: 205;

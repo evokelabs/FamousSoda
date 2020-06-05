@@ -1,0 +1,46 @@
+// Button Styles
+
+input.form-control {
+    color: black;
+    border-radius: 0;
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+
+input.form-control::placeholder {  
+    /* Firefox, Chrome, Opera */ 
+    text-align: center; 
+    color: #cecece;
+}
+input.form-control::-ms-input-placeholder {  
+    /* Microsoft Edge */ 
+    text-align: center; 
+    color: #cecece;
+}
+input.form-control:focus {
+    color: black;
+    background-color: #fff!important;
+    border: 3px solid black!important;
+    outline: 0!important;
+    box-shadow: 0 0 0 0 black!important;
+}
+
+.append-search {
+    margin-left:-30px;
+}
+
+.golden-awesome {
+    font-size:20px;
+    font-weight: 100;
+	margin-top: 7px;
+	fill: url(#rg);
+  }
+  
+.golden-awesome svg * {
+	fill: url(#rg);
+  }

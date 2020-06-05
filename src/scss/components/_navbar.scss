@@ -1,0 +1,129 @@
+// Styling for the navbar
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: black;
+    
+    a {
+        color:black
+    }
+    .container {
+        z-index: 3000!important;
+
+        background: none;
+        text-decoration: inherit;
+
+        border: 6px solid;
+        border-bottom: 0px;
+        border-image-slice: 1;
+	    border-width: 3px;
+	
+	    margin-top: 4px;
+      
+        border-image-source: linear-gradient(120deg, rgba(97,65,39,1) 0%, rgba(114,81,45,1) 8%, rgba(161,128,61,1) 16%, rgba(234,204,142,1) 26%, rgba(234,204,142,1) 38%, rgba(136,103,53,1) 45%, rgba(208,175,106,1) 52%, rgba(139,90,53,1) 64%, rgba(198,164,120,1) 75%, rgba(164,135,80,1) 84%, rgba(172,140,75,1) 93%, rgba(97,65,39,1) 99%);
+        -webkit-background-clip: text;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-top:2px;
+    }
+    
+    .navbar-brand {
+        margin:0;
+        img {
+            margin-top:3px;
+            height: 60px;
+        }
+    }
+    
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                font-family: $headings-font-family;
+                font-size: 0.95rem;
+                color: black;
+                letter-spacing: $headings-letter-spacing;
+                &.active,
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    #openCart {
+        img {
+            width: 25px;
+            cursor: default;
+            opacity:0;
+        }
+        img.active {
+            cursor: pointer;
+            opacity:1;
+        }
+
+        .itemsInCart {
+            /* https://cssgradient.io/ */
+            background: -webkit-linear-gradient(30deg, rgba(97,65,39,1) 0%, rgba(114,81,45,1) 8%, rgba(161,128,61,1) 16%, rgba(234,204,142,1) 26%, rgba(234,204,142,1) 38%, rgba(136,103,53,1) 45%, rgba(208,175,106,1) 52%, rgba(139,90,53,1) 64%, rgba(198,164,120,1) 75%, rgba(164,135,80,1) 84%, rgba(172,140,75,1) 93%, rgba(97,65,39,1) 99%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.4em;
+            padding: 5px;
+            display: inline-block;
+            font-family: 'Zwizz Regular';
+
+            @include media-breakpoint-down(md) {
+                display:none;
+            }
+        }
+    }
+}
+
+
+#sideMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4000!important;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    a {
+        font-family: "Zwizz SemiBold";
+        padding: 4px 4px 4px 32px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        opacity: 1;
+        margin-left:50px;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    a.stars {
+        font-family: 'Zwizz ExtraBold';
+        font-size: 1.4rem;
+        color: black;
+    }
+
+    a.closebtn {
+        cursor: pointer;
+        font-size: 3rem;
+        font-family: "Zwizz Regular";
+        -webkit-filter: brightness(160%);
+        filter: brightness(160%);
+        line-height: 0.8;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    #sideMenu {padding-top: 15px;}
+    #sideMenu a {font-size: 18px;}
+}
