@@ -11730,8 +11730,10 @@ svg:not(:root).svg-inline--fa {
   }
 }
 
-#you {
-  overflow: hidden;
+@media (max-width: 991.98px) {
+  #you .hero-image {
+    min-height: 400px;
+  }
 }
 
 section.soda-hero .container {
