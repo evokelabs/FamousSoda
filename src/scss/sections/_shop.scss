@@ -1,12 +1,11 @@
-
 #sideShop {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 4000!important;
+    z-index: 4000 !important;
     top: 0;
     right: 0;
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -22,28 +21,33 @@
         transition: 0.3s;
         opacity: 1;
         cursor: pointer;
-		border-bottom: 2px solid black;
+        border-bottom: 2px solid black;
 
-        margin-left:50px;
+        margin-left: 50px;
+
         @include media-breakpoint-down(md) {
-            margin-left:0;
+            margin-left: 0;
+
             svg {
-                margin-left:10px;
+                margin-left: 10px;
             }
         }
 
     }
+
     a:hover {
         color: black;
     }
 
     .itemLine {
-        padding-top:5px;
-        margin-left:50px;
+        padding-top: 5px;
+        margin-left: 50px;
+
         @include media-breakpoint-down(md) {
-            margin-left:0;
+            margin-left: 0;
+
             .row {
-                padding-left:10px;
+                padding-left: 10px;
             }
         }
 
@@ -52,7 +56,7 @@
 
         .product {
             .remove {
-                text-align:right;
+                text-align: right;
                 margin-top: 3pt;
                 margin-right: 3pt;
                 line-height: 0.5;
@@ -61,41 +65,57 @@
             }
         }
     }
+
     .spacer {
         margin: 0;
-        padding:0;
+        padding: 0;
         height: 2px;
         background-color: black;
     }
-    
+
     .subTotal {
-        margin-left:50px;
+        margin-left: 50px;
+
         @include media-breakpoint-down(md) {
-            margin-left:none;
-            margin-right:none;
+            margin-left: none;
+            margin-right: none;
+
             h2 {
                 width: 100%;
-                display:block;
+                display: block;
             }
         }
+
         h2 {
             font-family: "Zwizz ExtraBold";
             font-size: 1.4rem;
             text-transform: uppercase;
             line-height: 1.5;
         }
-        .btn-gold { 
+
+        .btn-gold {
             margin-top: 0;
         }
+
         position: absolute;
         bottom: 5pt;
     }
+
     .hidden {
-        display:none;
+        display: none;
+    }
+
+    button#goToShopify {
+        width: auto !important;
     }
 }
 
 @media screen and (max-height: 450px) {
-    #sideShop {padding-top: 15px;}
-    #sideShop a {font-size: 18px;}
+    #sideShop {
+        padding-top: 15px;
+    }
+
+    #sideShop a {
+        font-size: 18px;
+    }
 }

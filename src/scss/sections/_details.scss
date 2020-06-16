@@ -1,17 +1,19 @@
 #details {
+
+	min-height: fit-content;
+
 	@include media-breakpoint-up(lg) {
-		 .info {
+		.info {
 			margin-left: 0;
 			margin-right: auto;
 		}
+
 		.video {
 			width: 50%;
 			position: absolute;
 			right: 0;
 		}
-		.cart-menu {
-			margin-top: 60pt;
-		}
+
 	}
 
 	@media only screen and (min-width: 1200px) {
@@ -21,41 +23,100 @@
 	}
 
 	@include media-breakpoint-down(md) {
+
+		.info {
+			padding-top: 90pt;
+		}
+
 		.cart-menu {
 			left: 5pt;
 			right: 5pt;
 			bottom: 5pt;
-			width: unset!important;
+			width: unset !important;
+			margin: 0;
+
 		}
 	}
 }
 
 #whyFamous {
-	background-color: #FBF7F5 !important;
-	h4 {
-		font-family: "FSoda-SemiBold";
+
+	h1 {
+		padding-bottom: 0;
 	}
+
+	h4,
+	p {
+		color: white;
+	}
+
+	h4 {
+		font-family: "FSoda-ExtraBold";
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		margin-bottom: 10pt;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	img {
+		max-width: 160px;
+		margin-bottom: 15px;
+	}
+
+	.info {
+		padding-top: 20px;
+		padding-bottom: 90px;
+	}
+
 }
 
 #facts {
+
+	.info {
+		padding-top: 120px;
+		min-height: 100vh;
+	}
+
+	.video {
+		min-height: 100vh;
+		z-index: 800;
+		padding: 0;
+		height: 100%;
+	}
+
+	.video video {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+
+
 	@include media-breakpoint-down(md) {
-		padding-left:5px;
-		padding-right:5px;
+		padding-left: 5px;
+		padding-right: 5px;
+
 		.video {
 			scroll-snap-align: start;
 		}
 	}
+
 	@include media-breakpoint-up(lg) {
-		 .info {
+		.info {
 			margin-left: auto;
 			margin-right: 0;
 		}
+
 		.video {
 			width: 50%;
 			position: absolute;
 			left: 0;
 		}
 	}
+
 	@media only screen and (min-width: 1200px) {
 		video {
 			padding-right: calc((100% - 1170px) / 2);

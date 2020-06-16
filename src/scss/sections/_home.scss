@@ -1,9 +1,13 @@
 #home {
 	width: 100vw;
 	height: 100vh;
+	height: -webkit-fill-available;
 	margin: 0;
 	padding: 0;
-	video, img {
+	justify-content: flex-start;
+
+	video,
+	img {
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -32,10 +36,13 @@
 		*/
 		object-fit: cover;
 	}
+
 	.info {
 		z-index: 50;
+		padding-top: 115px;
 	}
-/*
+
+	/*
 	@include media-breakpoint-down(md) {
 		h5 {
 			position: absolute;

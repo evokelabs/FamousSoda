@@ -1,0 +1,166 @@
+.bottle:hover .bottle-hero,
+.bottle-details:hover .bottle-hero,
+.bottle:hover .bottle-sparkle,
+.bottle-details:hover .bottle-sparkle {
+    animation: BottleHoverEffect 1.5s ease-in-out alternate infinite;
+}
+
+.bottle:hover .bottle-sparkle,
+.bottle-details:hover .bottle-sparkle {
+    animation: SparkleHoverEffect 1.5s ease-in-out alternate infinite;
+    opacity: 1;
+}
+
+.bottle:hover .bottle-shadow,
+.bottle-details:hover .bottle-shadow {
+    animation: BottleShadowHoverEffect 1.5s ease-in-out alternate infinite;
+
+}
+
+
+.bottle-box-container:hover .bottle-single:nth-child(1) {
+    animation: BottleSingle-1 1.5s ease-in-out alternate infinite;
+    animation-delay: 0s;
+}
+
+.bottle-box-container:hover .bottle-single:nth-child(2) {
+    animation: BottleSingle-2 1.5s ease-in-out alternate infinite;
+    animation-delay: 0.5s;
+}
+
+.bottle-box-container:hover .bottle-single:nth-child(3) {
+    animation: BottleSingle-3 1.5s ease-in-out alternate infinite;
+    animation-delay: 1s;
+}
+
+.bottle-box-container:hover .bottle-single:nth-child(4) {
+    animation: BottleSingle-4 1.5s ease-in-out alternate infinite;
+    animation-delay: 1.5s;
+}
+
+
+
+.bottle-sparkle {
+    display: inline-block;
+    position: relative;
+    left: 160px;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+    top: 170px;
+}
+
+.sparkle {
+    display: inline-block;
+    background-image: url('./../assets/images/sparkle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 300px;
+    height: 300px;
+    animation: SpinSparkleEffect 1.5s linear infinite;
+}
+
+.bottle-box-container {
+
+    position: absolute;
+    top: 50px;
+    left: -100px;
+
+    @include media-breakpoint-down(md) {
+
+        top: 0px;
+        transform: scale(0.65);
+        -webkit-transform: scale(0.65);
+        margin-left: 60px;
+
+    }
+}
+
+
+@keyframes BottleHoverEffect {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: -30px;
+    }
+}
+
+@keyframes BottleShadowHoverEffect {
+    from {
+        left: 0px;
+        top: 0px;
+    }
+
+    to {
+        left: -25px;
+        top: -15px;
+    }
+}
+
+@keyframes SpinSparkleEffect {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes SparkleHoverEffect {
+
+    from {
+        top: 170px;
+    }
+
+    to {
+        top: 140px;
+    }
+
+}
+
+@keyframes BottleSingle-1 {
+    from {
+        top: 0px;
+
+
+    }
+
+    to {
+        top: -20px;
+    }
+}
+
+@keyframes BottleSingle-2 {
+    from {
+        top: -6px;
+    }
+
+    to {
+        top: -36px;
+    }
+}
+
+@keyframes BottleSingle-3 {
+    from {
+        top: -12px;
+
+    }
+
+    to {
+        top: -42px;
+    }
+}
+
+@keyframes BottleSingle-4 {
+    from {
+        top: -18px;
+
+    }
+
+    to {
+        top: -48px;
+    }
+}

@@ -1,0 +1,133 @@
+#famous-vip,
+#apply-vip {
+    .info {
+        padding-top: 60px;
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        h4 {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+#apply-vip {
+    min-height: 300px;
+
+    input.form-control,
+    textarea.form-control {
+        color: black;
+        border-radius: 0;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+        border-left: 3px solid black;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+
+    input.form-control::placeholder,
+    textarea.form-control::placeholder {
+        /* Firefox, Chrome, Opera */
+        text-align: center;
+        color: #fff;
+    }
+
+    input.form-control::-ms-input-placeholder,
+    textarea.form-control::-ms-input-placeholder {
+        /* Microsoft Edge */
+        text-align: center;
+        color: #fff;
+    }
+
+    input.form-control:focus,
+    textarea.form-control:focus {
+        color: black;
+        background-color: #EDC87C !important;
+        border: 3px solid black !important;
+        outline: 0 !important;
+        box-shadow: 0 0 0 0 black !important;
+    }
+
+    textarea.form-control {
+        text-align: left;
+    }
+
+    @include media-breakpoint-down(md) {
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        padding-bottom: 30pt;
+    }
+
+    #mc-embedded-subscribe {
+        margin: 0 !important;
+    }
+
+    #mc-embedded-subscribe:focus {
+        outline: 0px !important;
+    }
+
+    .mce_inline_error {
+        color: red !important;
+        border: 0px !important;
+        background-color: transparent !important;
+    }
+
+    input.mce_inline_error,
+    textarea.mce_inline_error {
+        color: black !important;
+        border-radius: 0 !important;
+        border-top: 3px solid black !important;
+        border-right: 3px solid black !important;
+        border-left: 3px solid black !important;
+        border-bottom: 3px solid transparent !important;
+        background-color: transparent !important;
+        text-transform: uppercase !important;
+    }
+
+    #mce-success-response {
+        color: green;
+    }
+}
+
+#famous-vip {
+    @include media-breakpoint-down(md) {
+
+        .info {
+            padding-top: 90pt;
+        }
+    }
+}
+
+#apply-vip {
+
+    @include media-breakpoint-down(md) {
+
+        min-height: 100vh;
+
+    }
+}
+
+#how-to-get-started {
+
+    .info {
+        padding-top: 60px;
+        padding-bottom: 30px;
+
+        h1 {
+            padding-bottom: 0;
+        }
+    }
+}

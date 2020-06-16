@@ -3,31 +3,18 @@ doctype html
 head
   include ../pug-includes/head.pug
 body#page-top
-  #bubblesContainer
   #wrap
     include ../pug-includes/menu.pug
     include ../pug-includes/shop.pug
     // First Blocks
     section#home.soda-section
-      video(autoplay='autoplay' loop)
+      video(autoplay='autoplay' muted="muted" loop)
         source(src='assets/videos/home-sm.mp4', type='video/mp4').sizing
       .container
         .row
           .col-12.info
-            h1.text-center FAMOUS FOR A REASON.
-            h5.text-center Nothing artificial, Australian Made, 8 calories a bottle and zero sugar - our stars shine on their own
-    section#brand.soda-section.bg-pink-lemonade.aligned
-      .container
-        .row
-          .col-12.info.text-center
-            h2 We're not trying to do something new.
-            h2 We're just trying to do something right.
-            br
-            p Thought soda = sugar spike? Think again. Our Australian made, all-natural, 8 calorie-per-bottle formula means we’re not a guilty pleasure, we’re an innocent delight with a glint in our eye.  
-            p Months of rigorous testing, tasting and trialling, just so you can have your one refreshing moment in the spotlight - soda worth the squeeze. 
-            p We’re not new, we’re better. We haven’t reinvented the soda game, we’ve adapted it to reflect the growing number of diabetics across the world, and then given it our own sparkly spin - there’s no business like show business.
-            p Don’t go thinking we’re all about aesthetics, we’ve got style and substance - if you’ve been checking us out, just know we taste even better than we look. 
-            p In a world where you can be anything, be good to yourself.
+            h1.text-center THINK ABOUT WHAT YOU DRINK
+            h5.text-center Zero Sugar, Zero Preservatives, Australian Made, 100% Natural And Only 8 Calories. Our stars shine on their own.
     // Products
     - var product = {}
     - var n = 0;
@@ -36,29 +23,47 @@ body#page-top
         when 0
           include ../copy/blood-orange.pug
         when 1
-          include ../copy/pink-lemonade.pug
-        when 2
           include ../copy/passion-fruit.pug
-        when 3
-          include ../copy/ginger-beer.pug
-        when 4
-          include ../copy/lemon.pug
-        default
+        when 2
           include ../copy/pink-lemonade.pug
+        when 3
+          include ../copy/lemon.pug
+        when 4
+          include ../copy/ginger-beer.pug
+        default
+          include ../copy/blood-orange.pug
       - n = n + 1;
-      section#orange.soda-section.aligned(class='bg-'+product.code)
+      section.soda-section.soda-hero.aligned(class='bg-'+product.code)
+        .bubble-container
+          .bubble
+          .bubble
+          .bubble
+          .bubble
+          .bubble
+          .bubble
+          .bubble
         .container
           .row
             .col-lg-7.col-md-12.col-sm-12.info
               h1.product-header= product.name
-              h2= product.slogan
+              h2=product.slogan
               p= product.description
               .action-button
-                a.btn-gold(href=product.code+'.html') SHOP NOW
-            .col-lg-5.col-md-12.col-sm-12.video.blk
-              video(autoplay='autoplay' loop)
-                source(src='assets/videos/'+product.code+'-sm.mp4', type='video/mp4').sizing
-    section#you.soda-section.bg-want-you.aligned
+                a.btn-gold(href=product.code+'.html') BUY NOW
+            .col-lg-5.col-md-12.col-sm-12.hero-image.blk
+              .bottle
+                img.bottle-shadow(src='assets/images/'+product.code+'-shadow.png')
+                img.bottle-hero(src='assets/images/'+product.code+'-hero.png')
+                .bottle-sparkle
+                  .sparkle
+                .bubble-bottle-container
+                  .bubble-bottle
+                  .bubble-bottle
+                  .bubble-bottle
+                  .bubble-bottle
+                  .bubble-bottle
+      .gradient(class='gradient-'+product.code)
+    section#you.soda-section.aligned(class='bg-pink-lemonade bg-we-want-you')
       .container
         .row
           .col-lg-7.col-md-12.col-sm-12.info
@@ -66,15 +71,46 @@ body#page-top
             h2 If you have dreams of fame and fortune (let’s face it, who doesn’t?), we want to hear from you.
             p What if we told you that you could make money by selling Famous soda, without ever leaving your palace? True stars should have the luxury of working in comfort and style, naturally. Selling sugar-free, delicious soda to your network, and getting paid to do it.
             p We know, we know, we’re too good to you.
-            //p
-              | What if we told you that you could make money by selling Famous soda, without ever leaving your palace? True stars should have the luxury of working in comfort and style, naturally. Selling sugar-free, delicious soda to your network, and getting paid to do it. We know, we know, we’re too good to you. 
-            //p
-              | To apply, tell us in 500 words why you’ve earned your spot in the Famous Face line-up, and we’ll be in touch. Honesty and creativity mandatory, humility and modesty optional. Consider this your golden ticket to soda royalty.
             .action-button
               a.btn-gold(href='famous-vip.html') SIGN UP
-          .col-lg-5.col-md-12.col-sm-12.video.blk
-            video(autoplay='autoplay' loop)
-                source(src='assets/videos/family-pack-sm.mp4', type='video/mp4').sizing
+          .col-lg-5.col-md-12.col-sm-12.hero-image.blk
+            .bottle-box-container
+              .bottle-box
+              img.bottle-box(src='assets/images/pink-lemonade-box.png')
+              .bottles-selection
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+              img.bottle-box(src='assets/images/pink-lemonade-box-foreground.png')
+      .gradient(class='gradient-we-want-you')
+    section#brand.soda-section.bg-black.aligned
+      .container.mb-5
+        .row
+          .col-lg-12.mb-4.mt-2.col-sm-12
+            h2.golden-text We’re not trying to do something new.
+            h2.golden-text We’re just trying to do something right.
+          .col-lg-6.col-sm-12
+            p We set out change the world a little bit for the better.
+            p Our sugar free, all-natural formula means we’re not a guilty pleasure, we’re an innocent delight.
+            p Mixing, brewing &amp; blending all-natural ingredients requires masters of their trade and months of rigorus testing and tasting to create the magic formula.
+            p Our sodas not only taste good and look good, we can proudly say our sodas have Zero Sugar, are 100% Natural, Australian Made and only 8 Calories per bottle.
+          .col-lg-6.col-sm-12            
+            p How refreshing is that?
+            p We’ve just started our journey, we’re planning on being leaders in the “better for you space”, with more products that we look forward to sharing with you soon.
+            p In a world where you can be anything, be good to yourself.
+    .gradient(class='gradient-black')
     section#newsletter.soda-section.bg-white
       .container
         .row
@@ -91,14 +127,14 @@ body#page-top
                   .col-md-6.col-12.mt-4.mc-field-group
                     input#mce-EMAIL.form-control.required.email(type='email' name='EMAIL' placeholder='EMAIL')
                   .col-md-6.col-12.mt-4.mc-field-group
-                    input#mce-MMERGE7.form-control(type='text' placeholder='STATE' name='MMERGE7')
+                    input#mce-MMERGE7.form-control(type='text' placeholder='POSTCODE' name='MMERGE7')
               #mce-responses.clear
                 #mce-error-response.response(style='display:none')
                 #mce-success-response.response(style='display:none')
               div(style='position: absolute; left: -5000px;' aria-hidden='true')
                 input(type='text' name='b_da4a1b4bd46096e992e2fe7f2_d904db5485' tabindex='-1' value='')
-              .clear.mt-4
-                input#mc-embedded-subscribe.btn-gold(type='submit' value='SUBSCRIBE' name='SUBSCRIBE')
+              .clear.mt-4.text-right
+                input#mc-embedded-subscribe.btn-gold(type='submit' value='SUBMIT' name='SUBMIT')
     section#stores.soda-section.bg-want-you
       .container
         .row

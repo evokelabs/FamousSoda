@@ -1,0 +1,155 @@
+- var pageTitle = 'Famous Soda'
+doctype html
+head
+  include ../pug-includes/head.pug
+body#page-top
+  #wrap
+    include ../pug-includes/menu.pug
+    include ../pug-includes/shop.pug
+    // First Blocks
+    section#home.soda-section
+      video(autoplay='autoplay' muted="muted" loop)
+        source(src='assets/videos/home-sm.mp4', type='video/mp4').sizing
+      .container
+        .row
+          .col-12.info
+            h1.text-center THINK ABOUT WHAT YOU DRINK
+            h5.text-center Zero Sugar, Zero Preservatives, Australian Made, 100% Natural And Only 8 Calories. Our stars shine on their own.
+    // Products
+    - var product = {}
+    - var n = 0;
+    while n <= 4
+      case n
+        when 0
+          include ../copy/blood-orange.pug
+        when 1
+          include ../copy/passion-fruit.pug
+        when 2
+          include ../copy/pink-lemonade.pug
+        when 3
+          include ../copy/lemon.pug
+        when 4
+          include ../copy/ginger-beer.pug
+        default
+          include ../copy/blood-orange.pug
+      - n = n + 1;
+      section.soda-section.soda-hero.aligned(class='bg-'+product.code)
+        .container
+          .row
+            .col-lg-7.col-md-12.col-sm-12.info
+              h1.product-header= product.name
+              h2=product.slogan
+              p= product.description
+              .action-button
+                a.btn-gold(href=product.code+'.html') BUY NOW
+            .col-lg-5.col-md-12.col-sm-12.hero-image.blk
+              .bottle
+                img.bottle-shadow(src='assets/images/'+product.code+'-shadow.png')
+                img.bottle-hero(src='assets/images/'+product.code+'-hero.png')
+                .bottle-sparkle
+                  .sparkle
+                .bubble-bottle-container
+      .gradient(class='gradient-'+product.code)
+    section#you.soda-section.aligned(class='bg-pink-lemonade bg-we-want-you')
+      .container
+        .row
+          .col-lg-7.col-md-12.col-sm-12.info
+            h1 WE WANT YOU!
+            h2 If you have dreams of fame and fortune (let’s face it, who doesn’t?), we want to hear from you.
+            p What if we told you that you could make money by selling Famous soda, without ever leaving your palace? True stars should have the luxury of working in comfort and style, naturally. Selling sugar-free, delicious soda to your network, and getting paid to do it.
+            p We know, we know, we’re too good to you.
+            .action-button
+              a.btn-gold(href='famous-vip.html') SIGN UP
+          .col-lg-5.col-md-12.col-sm-12.hero-image.blk
+            .bottle-box-container
+              .bottle-box
+              img.bottle-box(src='assets/images/pink-lemonade-box.png')
+              .bottles-selection
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+              img.bottle-box(src='assets/images/pink-lemonade-box-foreground.png')
+      .gradient(class='gradient-we-want-you')
+    section#brand.soda-section.bg-black.aligned
+      .container.mb-5
+        .row
+          .col-lg-12.mb-4.mt-2.col-sm-12
+            h2.golden-text We’re not trying to do something new.
+            h2.golden-text We’re just trying to do something right.
+          .col-lg-6.col-sm-12
+            p We set out change the world a little bit for the better.
+            p Our sugar free, all-natural formula means we’re not a guilty pleasure, we’re an innocent delight.
+            p Mixing, brewing &amp; blending all-natural ingredients requires masters of their trade and months of rigorus testing and tasting to create the magic formula.
+            p Our sodas not only taste good and look good, we can proudly say our sodas have Zero Sugar, are 100% Natural, Australian Made and only 8 Calories per bottle.
+          .col-lg-6.col-sm-12            
+            p How refreshing is that?
+            p We’ve just started our journey, we’re planning on being leaders in the “better for you space”, with more products that we look forward to sharing with you soon.
+            p In a world where you can be anything, be good to yourself.
+    .gradient(class='gradient-black')
+    section#newsletter.soda-section.bg-white
+      .container
+        .row
+          .col.info
+            h1 NEWSLETTER.
+            form#mc-embedded-subscribe-form(action='https://famoussodaco.us12.list-manage.com/subscribe/post?u=da4a1b4bd46096e992e2fe7f2&id=d904db5485' method='post' name='mc-embedded-subscribe-form' class='validate' target='_blank' novalidate)
+              #mc_embed_signup_scroll
+                .row
+                  .col-md-6.col-12.mt-4.mc-field-group
+                    input#mce-FNAME.form-control(type='text' placeholder='FIRST NAME' name='FNAME')
+                  .col-md-6.col-12.mt-4.mc-field-group
+                    input#mce-LNAME.form-control(type='text' placeholder='LAST NAME' name='LNAME')
+                .row
+                  .col-md-6.col-12.mt-4.mc-field-group
+                    input#mce-EMAIL.form-control.required.email(type='email' name='EMAIL' placeholder='EMAIL')
+                  .col-md-6.col-12.mt-4.mc-field-group
+                    input#mce-MMERGE7.form-control(type='text' placeholder='POSTCODE' name='MMERGE7')
+              #mce-responses.clear
+                #mce-error-response.response(style='display:none')
+                #mce-success-response.response(style='display:none')
+              div(style='position: absolute; left: -5000px;' aria-hidden='true')
+                input(type='text' name='b_da4a1b4bd46096e992e2fe7f2_d904db5485' tabindex='-1' value='')
+              .clear.mt-4.text-right
+                input#mc-embedded-subscribe.btn-gold(type='submit' value='SUBMIT' name='SUBMIT')
+    section#stores.soda-section.bg-want-you
+      .container
+        .row
+          .col.info
+            h1 STOCKISTS.
+            .row
+              .col-md-4.col-12.mt-4
+                .input-group.md-form.form-sm.form-2.pl-0
+                  input#searchTextField.form-control.my-0.py-1(style='flex:none' type='text' placeholder='POSTCODE OR ADDRESS' aria-label='Search')
+                  .append-search.golden-awesome
+                    svg.svg-inline--fa.fa-search.fa-w-16(aria-hidden='true' focusable='false' data-prefix='fa' data-icon='search' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512' data-fa-i2svg='')
+                      path(fill='currentColor' d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z')
+                    //i.fa.fa-search(aria-hidden='true')
+                div#renderedLocations
+                div#templateLocation.hidden
+                  div.row.no-gutters
+                    h4.golden-awesome.col-1
+                      img(src='assets/images/cart-star.png')
+                    h4.golden-text.col
+                  span.address 
+              #map.col.mt-4
+    include ../pug-includes/footer.pug
+  // Bootstrap core JS
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
+  script(src='https://sdks.shopifycdn.com/buy-button/1.0.0/buybutton.js')
+  script(src='js/scripts.min.js')
+  script(type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+  script(type='text/javascript') (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[7]='MMERGE7';ftypes[7]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+  include ../pug-includes/google-analytics.pug
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCnRwZA52ewybtrBsLxCxerJooQAJLiSHE&callback=mapInit&libraries=geometry,places')

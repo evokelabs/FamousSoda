@@ -8,7 +8,7 @@ body#page-top
     include ../pug-includes/menu.pug
     include ../pug-includes/shop.pug
     // First Blocks
-    section#you.soda-section.bg-blood-orange.aligned
+    section#famous-vip.soda-section.bg-pink-lemonade.aligned.flex-end
       .container
         .row
           .col-lg-7.col-md-12.col-sm-12.info
@@ -16,9 +16,28 @@ body#page-top
             h2 If you have dreams of fame and fortune (let’s face it, who doesn’t?), we want to hear from you.
             p We’re pulling back the curtain on the VIP area, and are on the hunt for anyone who has what it takes to be a face of Famous.
             p What if we told you that you could make money by selling Famous soda, without ever leaving your palace? True stars should have the luxury of working in comfort and style, naturally. Selling sugar-free, delicious soda to your network, and getting paid to do it. We know, we know, we’re too good to you.
-          .col-lg-5.col-md-12.col-sm-12.video.blk
-            video(autoplay='autoplay' loop)
-                source(src='/assets/videos/family-pack-xl.mp4', type='video/mp4')
+          .col-lg-5.col-md-12.col-sm-12.hero-image.blk
+            .bottle-box-container
+              .bottle-box
+              img.bottle-box(src='assets/images/pink-lemonade-box.png')
+              .bottles-selection
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                .bottle-row
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+                  img.bottle-single(src='assets/images/pink-lemonade-single.png')
+              img.bottle-box(src='assets/images/pink-lemonade-box-foreground.png')
+    .gradient(class='join-gradient-pink-lemonade')
     section.soda-section.bg-passion-fruit
       .container
         .row
@@ -32,7 +51,8 @@ body#page-top
             p You will receive $5 for every case ordered and your customers will also recieve a $5 discount at purchase through our online store.
             p And there’s the sweet spot (with zero sugar of course) because you continue to earn $5 a case every time they re-order.
             p At the end of each month we will tally up the scores and you will be paid to your nominated bank account through your ABN.
-    section#whyFamous.soda-section.bg-pink-lemonade
+    .gradient(class='gradient-passion-fruit')
+    section#how-to-get-started.soda-section.bg-pink-lemonade
       .container
           .row
             .col-12.info
@@ -40,23 +60,20 @@ body#page-top
               .row.mt-4
                 .col
                   h4 STEP 01
-                  p To apply, tell us in 500 words why you’ve earned your spot in the Famous line-up, and we’ll be in touch. Honesty and creativity mandatory, humility and modesty optional.
+                  p To apply, tell us in 500 words why you’ve earned your spot in the Famous line-up, and we’ll be in touch.
               .row.mt-4
                 .col
                   h4 STEP 02
-                  p You will need an ABN number, if you don’t have one it takes 5 minutes to apply online <a href="https://abnregistry.org/registration-form/">here</a>
+                  p Once we’ve reviewed applications, we will be in touch with you on next steps via email.
               .row.mt-4
                 .col
                   h4 STEP 03
-                  p Once we’ve reviewed applications, we will be in touch with you on next steps via email. To get started we offer a mixed case for $40.00 delivered to your door so you can taste, test and share with your friends.
-              .row.mt-4
-                .col
-                  h4 STEP 04
                   p You will be assigned a unique code for your customers to use at check out. This code will give you $5 from every case sold. Your customer will recieve $5 off their order. Win, win for everybody.
               .row.mt-4
                 .col 
-                  h4 STEP 05
+                  h4 STEP 04
                   p Share your code and start selling. We can offer you a range of creative assets and imagery to use on social media to help you along the way.
+    .gradient(class='gradient-pink-lemonade-vip')
     section#apply-vip.soda-section.bg-ginger-beer
       .container
         .row
@@ -77,7 +94,7 @@ body#page-top
                     .col-md-6.col-12.mt-4.mc-field-group
                       input#mce-MMERGE6.form-control.required(type='text' placeholder='PHONE NUMBER' value='' name='MMERGE6')
                     .col-md-6.col-12.mt-4.mc-field-group
-                      input#mce-MMERGE5.form-control(type='text' placeholder='ABN / TAX CODE' value='' name='MMERGE5')
+                      input#mce-MMERGE5.form-control(type='text' placeholder='ABN' value='' name='MMERGE5')
                     .col-md-6.col-12.mt-4.mc-field-group
                       input#mce-MMERGE4.form-control.required(type='text' placeholder='SOCIAL MEDIA ACCOUNT' name='MMERGE4')
                     .col-12.mt-4.mc-field-group
@@ -97,9 +114,9 @@ body#page-top
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
   script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
   script(src='https://sdks.shopifycdn.com/buy-button/1.0.0/buybutton.js')
-  script(src='/js/scripts.min.js')
+  script(src='js/scripts.min.js')
+  script(type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
   script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBwtDDKGr4RBcB8diupkpR3Rkhq2f4yF8g&callback=mapInit&libraries=geometry,places')
-  script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
   script(type='text/javascript').
     (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[6]='MMERGE6';ftypes[6]='text';fnames[5]='MMERGE5';ftypes[5]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[3]='MMERGE3';ftypes[3]='address';fnames[7]='MMERGE7';ftypes[7]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
   include ../pug-includes/google-analytics.pug

@@ -30,6 +30,7 @@
   "homepage": "https://www.famoussodaco.com",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "backgroundor": "^0.1.1",
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0",
     "shopify-buy": "^2.10.0"

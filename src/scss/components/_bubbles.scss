@@ -1,0 +1,157 @@
+.bubble-container {
+    position: absolute;
+    width: 100vw;
+    min-height: 580px;
+
+    @include media-breakpoint-down(md) {
+        min-height: 100%;
+    }
+}
+
+.bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./../assets/images/bubble.png'), url('./../assets/images/bubble-burst.png');
+    background-image: url('./../assets/images/bubble.png');
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+    left: -5%;
+    animation: moveBubble 14.5s linear 0s infinite;
+    background-size: cover;
+
+}
+
+section.soda-section .bubble p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+section.soda-section.aligned:nth-of-type(even) .bubble-bottle-container {
+    position: absolute;
+    left: 283px;
+    top: 78px;
+}
+
+
+section.soda-section.aligned:nth-of-type(odd) .bubble-bottle-container {
+    position: absolute;
+    left: 261px;
+    top: 114px;
+}
+
+section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
+    position: absolute;
+    left: 260px;
+    top: 98px;
+}
+
+.bg-blood-orange#details .bubble-bottle-container {
+    position: absolute;
+    left: 314px;
+    top: 137px;
+}
+
+.bg-pink-lemonade#details .bubble-bottle-container {
+    position: absolute;
+    left: 314px;
+    top: 90px;
+}
+
+.bg-passion-fruit#details .bubble-bottle-container {
+    position: absolute;
+    left: 304px;
+    top: 137px;
+}
+
+.bg-lemon#details .bubble-bottle-container {
+    position: absolute;
+    left: 265px;
+    top: 116px;
+}
+
+.bg-ginger-beer#details .bubble-bottle-container {
+    position: absolute;
+    left: 314px;
+    top: 100px;
+}
+
+
+.bubble-bottle {
+    position: absolute;
+    background-image: url('./../assets/images/bubble.png');
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+    animation: moveBubbleBottle 3s linear 0s infinite;
+    opacity: 0.5;
+    background-size: cover;
+}
+
+.bubble-bottle:nth-of-type(1) {
+    left: -10px;
+    height: 14px;
+    width: 14px;
+    animation-delay: -0.5s;
+}
+
+.bubble-bottle:nth-of-type(2) {
+    left: 10px;
+    height: 13px;
+    width: 13px;
+    animation-delay: -1s;
+}
+
+.bubble-bottle:nth-of-type(3) {
+    height: 16px;
+    width: 16px;
+    animation-delay: -1.5s;
+}
+
+.bubble-bottle:nth-of-type(4) {
+    left: 15px;
+    height: 10px;
+    width: 10px;
+    animation-delay: -2s;
+}
+
+.bubble-bottle:nth-of-type(5) {
+    left: -15px;
+    height: 12px;
+    width: 12px;
+    animation-delay: -2.5s;
+}
+
+
+/* Animations */
+@keyframes moveBubble {
+    0% {
+        left: -5%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moveBubbleBottle {
+    0% {
+        top: 0px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.5;
+    }
+
+    100% {
+        top: -100px;
+        opacity: 0;
+    }
+}

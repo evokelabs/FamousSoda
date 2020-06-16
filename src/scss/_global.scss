@@ -1,6 +1,7 @@
-
-html,body {
-	height: 100%!important;
+html,
+body {
+    height: 100% !important;
+    color: black;
 }
 
 // Global styling for this template
@@ -9,9 +10,8 @@ body {
 }
 
 p {
-    line-height: 1.4;
+    line-height: 1.2;
 }
-
 
 ::-moz-selection {
     background: $primary;
@@ -31,26 +31,154 @@ img::-moz-selection {
     background: transparent;
 }
 
+.bg-blood-orange {
+    background-image: linear-gradient(#f26231, #f47d42)
+}
 
-.bg-pink-lemonade { background-color: #F8BBD6!important; }
-.bg-blood-orange { background-color: #F47D4A!important; }
-.bg-passion-fruit { background-color: #FBAF56!important; }
-.bg-ginger-beer { background-color: #EDC87C!important; }
-.bg-lemon { background-color: #FFED67!important; }
-.bg-family-pack { background-color: white!important; }
-.bg-want-you { background-color: #FBF7F5!important; }
-.bg-white { background-color: white!important; }
-.bg-light { background-color: #FBF7F5!important; }
+.bg-passion-fruit {
+    background-image: linear-gradient(#f7b14f, #f9ce6f)
+}
+
+.join-gradient-blood-orange {
+    background-image: linear-gradient(#f2613100, #f47d42)
+}
+
+.join-gradient-pink-lemonade {
+    background-image: linear-gradient(#f5b1b0, #f7b14f)
+}
+
+.bg-pink-lemonade {
+    background-image: linear-gradient(#ef90a0, #f5b1b0)
+}
+
+.bg-lemon {
+    background-image: linear-gradient(#f1d638, #ffe76b)
+}
+
+.bg-ginger-beer {
+    background-image: linear-gradient(#edc37f, #f2d196)
+}
+
+.bg-family-pack {
+    background-color: white !important;
+}
+
+#you .info {
+    padding-right: 0 !important;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-black {
+    background-color: black !important;
+}
+
+.bg-light {
+    background-color: #FBF7F5 !important;
+}
+
+.bg-want-you {
+    background-color: #fff8f2;
+}
+
+.gradient {
+    min-height: 26pt;
+    width: 100vw;
+}
+
+.gradient-blood-orange {
+    background-image: linear-gradient(#f47d42, #f7b14f);
+}
+
+.gradient-passion-fruit {
+    background-image: linear-gradient(#f9ce6f, #ef90a0);
+}
+
+.gradient-pink-lemonade {
+    background-image: linear-gradient(#f5b1b0, #f1d638);
+}
+
+.gradient-lemon {
+    background-image: linear-gradient(#ffe76b, #edc37f);
+}
+
+.gradient-ginger-beer {
+    background-image: linear-gradient(#f2d196, #ef90a0);
+}
+
+.gradient-pink-lemonade-vip {
+    background-image: linear-gradient(#f5b1b0, #edc37f);
+}
+
+.we-want-you-bg {
+    background-image: linear-gradient(90deg, rgba(245, 153, 183, 0) 0%, rgba(245, 153, 183, 1) 1%, rgba(245, 153, 183, 1) 100%),
+        url('./../assets/images/we-want-you-bg.png');
+    background-repeat: no-repeat, repeat;
+    background-size: 58% auto, auto;
+    background-position: 100%, 0% 0%;
+    background-color: #f599b7;
+}
+
+.join-us-bg {
+    background-image: linear-gradient(90deg, rgba(244, 125, 66, 1) 0%, rgba(244, 125, 66, 1) 59%, rgba(244, 125, 66, 0) 60%),
+        url('./../assets/images/join-us-bg.png');
+    background-repeat: no-repeat, repeat;
+    background-size: 100% auto, auto;
+    background-position: 100%, 0% 0%;
+    background-color: #f47d42;
+}
+
+.gradient-we-want-you {
+    background-image: linear-gradient(#f5b1b0, #000);
+}
+
+.gradient-black {
+    background-image: linear-gradient(#000, #fff);
+}
+
+.gradient-details {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+}
+
+.gradient-whyfamous {
+    background-image: linear-gradient(#000, (rgba(0, 0, 0, 0)));
+    position: absolute;
+    z-index: 999;
+}
+
+
+
+.gradient-we-want-you {
+    margin-top: 0;
+}
 
 /* in body won't work ¯\_(ツ)_/¯ */
+
 html {
-	scroll-snap-type: y mandatory;
+    // scroll-snap-type: y mandatory;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 button:focus {
-	outline: 0px!important;
+    outline: 0px !important;
+}
+
+.flex-end {
+    justify-content: flex-end !important;
+}
+
+@include media-breakpoint-down(md) {
+
+    .we-want-you-bg {
+        background: #f599b7;
+    }
+
+    .join-us-bg {
+        background: #f47d42
+    }
 }

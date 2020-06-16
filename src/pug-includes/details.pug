@@ -3,58 +3,78 @@ doctype html
 head
   include ../pug-includes/head.pug
 body#page-top
-  #bubblesContainer
   #wrap
     include ../pug-includes/menu.pug
     include ../pug-includes/shop.pug
     // main soda content
     section#details.soda-section(class='bg-'+product.code)
+      .bubble-container
+        .bubble
+        .bubble
+        .bubble
+        .bubble
+        .bubble
+        .bubble
+        .bubble
       .container
         .row
           .col-lg-7.col-md-12.col-sm-12.info
             h1.product-header= product.name
-            h2= product.slogan
-            p= product.description
+            h2=product.slogan
+            p.mb-4=product.shopdescription
             .cart-menu(data-uuid=product.code)
-              p.free-shipping FREE SHIPPING*
               .row
-                .col.item 12 pack
-                .col.price $39.99
+                .col.item 
+                  p.extra-bold 12 pack
+                .col.price 
+                  p.extra-bold $44.99
               .tool.row.no-gutters
                 .col-2
                   button.rem(type='button') -
                 .col-8.total 1
                 .col-2 
                   button.add(type="button") +
-              button.btn-gold(type='button') ADD TO CART
-            p
-              small *$5 surcharge amay be applied at checkout for regional areas
-          .col-lg-5.col-md-12.col-sm-12.video
-            video(autoplay='autoplay' loop)
-              source(src='assets/videos/'+product.code+'-sm.mp4', type='video/mp4').sizing
+              button.btn-gold.btn-gold-brightnessfilter(type='button') BUY NOW
+            p.free-shipping.extra-bold FREE SHIPPING!
+            p.free-shipping-details
+              small *$5 surcharge may be applied at checkout for delivery to remote and regional areas
+          .col-lg-5.col-md-12.col-sm-12.hero-image.blk
+            .bottle-details
+              img.bottle-shadow(src='assets/images/'+product.code+'-shadow.png')
+              img.bottle-hero(src='assets/images/'+product.code+'-hero.png')
+              .bottle-sparkle
+                  .sparkle
+              .bubble-bottle-container
+                .bubble-bottle
+                .bubble-bottle
+                .bubble-bottle
+                .bubble-bottle
+                .bubble-bottle
+      .gradient(class='gradient-details')
     // why famous WHITE
-    section#whyFamous.soda-section
+    section#whyFamous.soda-section.bg-black
       .container
           .row
             .col-12.info
-              h1 WHY FAMOUS?
+              h1.golden-text WHY FAMOUS?
               .row.mt-4
                 .col-lg-3.col-xl-3.col-6
-                  img(src='assets/images/zero-sugar.svg')
-                  h4 Zero sugar
+                  img.golden-text(src='assets/images/zero-sugar.svg')
+                  h4 Zero<br>sugar
                   p All of our sodas are sugar free. That’s right, they’re sweet enough. Thanks to the natural sweeteners we use derived from fabulous fruits.
                 .col-lg-3.col-xl-3.col-6
-                  img(src='assets/images/natural.svg')
-                  h4 100% Natural
+                  img.golden-text(src='assets/images/natural.svg')
+                  h4 100%<br>Natural
                   p At the Famous Soda Co., we don’t do fake. Nasty additives and preservatives do not get past security, we can promise you that
                 .col-lg-3.col-xl-3.col-6
-                  img(src='assets/images/australian-made.svg')
-                  h4 Australian Made
+                  img.golden-text(src='assets/images/australian-made.svg')
+                  h4 Australian<br>Made
                   p Kylie, Hugh, Nicole... We love our famous Australians. And that’s why all our sodas are made right here on Australian soil.
                 .col-lg-3.col-xl-3.col-6
-                  img(src='assets/images/8-calories.svg')
-                  h4 Only 8 Calories
+                  img.golden-text(src='assets/images/8-calories.svg')
+                  h4 Only 8<br>Calories
                   p Famous Soda Co. does not endorse any behaviour that denies oneself from pleasure. Which is why all our drinks contain a teensy 8 calories per serve.
+    .gradient(class='gradient-whyfamous')
     section#facts.soda-section(class='bg-'+product.code)
       .container
         .row
@@ -68,12 +88,9 @@ body#page-top
                 br
                 | 330ml
             .row.table-gold
-              .col-8.title.text-right Avg Qty per Serving
+              .col
+              .col.title Avg Qty per Serving
               .col.title Avg Qty per 100ml
-            .row.table-gold
-              .col Energy
-              .col 33 kJ
-              .col 10 kJ
             .row.table-gold
               .col Energy
               .col 33 kJ
@@ -111,7 +128,7 @@ body#page-top
               .col= product.ingredients
           .col-lg-5.col-md-12.col-sm-12.video
             video(autoplay='autoplay' loop)
-              source(src='assets/videos/'+product.code+'2-sm.mp4', type='video/mp4').sizing
+              source(src='assets/videos/'+product.code+'-sm.mp4', type='video/mp4').sizing
     include ../pug-includes/footer.pug
   // Bootstrap core JS
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')

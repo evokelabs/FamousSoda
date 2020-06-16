@@ -1,73 +1,107 @@
 // Button Styles
 
 .btn-xl {
-    padding: 1.25rem 2.5rem;
-    font-family: $headings-font-family;
-    font-size: 1.125rem;
-    font-weight: $headings-font-weight;
+	padding: 1.25rem 2.5rem;
+	font-family: $headings-font-family;
+	font-size: 1.125rem;
+	font-weight: $headings-font-weight;
+	pointer-events: auto;
 }
 
 .btn-social {
-    height: 2.5rem;
-    width: 2.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-radius: 100%;
-
-    
+	height: 2.5rem;
+	width: 2.5rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border-radius: 100%;
+	pointer-events: auto;
 }
 
 .btn-gold {
-    background: none;
-    text-decoration: inherit;
-    padding: 0px 15px 0px 15px;
-	
-    margin-top: 30pt;
+	// Webkit backgound clip/text-fill-color working on Iphone, must roll back to color
+	// -webkit-text-fill-color: transparent;
+	color: #886735;
+	//-----------
 
-    border: 6px solid;
-    border-bottom: 0px;
-    border-image-slice: 1;
-    border-width: 3px;
-    letter-spacing: 0.2em;
-    
-    border-image-source: linear-gradient(120deg, rgba(97,65,39,1) 0%, rgba(114,81,45,1) 8%, rgba(161,128,61,1) 16%, rgba(234,204,142,1) 26%, rgba(234,204,142,1) 38%, rgba(136,103,53,1) 45%, rgba(208,175,106,1) 52%, rgba(139,90,53,1) 64%, rgba(198,164,120,1) 75%, rgba(164,135,80,1) 84%, rgba(172,140,75,1) 93%, rgba(97,65,39,1) 99%);
+	background: none;
 
-    font-family: 'Zwizz ExtraBold';
-    font-size: 1.7rem;
-    background: -webkit-linear-gradient(30deg, rgba(97,65,39,1) 0%, rgba(114,81,45,1) 8%, rgba(161,128,61,1) 16%, rgba(234,204,142,1) 26%, rgba(234,204,142,1) 38%, rgba(136,103,53,1) 45%, rgba(208,175,106,1) 52%, rgba(139,90,53,1) 64%, rgba(198,164,120,1) 75%, rgba(164,135,80,1) 84%, rgba(172,140,75,1) 93%, rgba(97,65,39,1) 99%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	text-decoration: inherit;
+	padding: 5px 15px 0px 15px;
 
-    transition: background 3s ease-in-out, background 3s ease-in-out;
+	margin-top: 30pt;
+	margin-bottom: 10pt;
+	border: 6px solid;
+	border-image-slice: 1;
+	border-width: 3px;
+	letter-spacing: 0.2em;
 
-	filter: brightness(120%);
+	border-image-source: linear-gradient(120deg, rgba(97, 65, 39, 1) 0%, rgba(114, 81, 45, 1) 8%, rgba(161, 128, 61, 1) 16%, rgba(234, 204, 142, 1) 26%, rgba(234, 204, 142, 1) 38%, rgba(136, 103, 53, 1) 45%, rgba(208, 175, 106, 1) 52%, rgba(139, 90, 53, 1) 64%, rgba(198, 164, 120, 1) 75%, rgba(164, 135, 80, 1) 84%, rgba(172, 140, 75, 1) 93%, rgba(97, 65, 39, 1) 99%);
+
+	font-family: 'Zwizz ExtraBold';
+	font-size: 1.7rem;
+	background: -webkit-linear-gradient(30deg, rgba(97, 65, 39, 1) 0%, rgba(114, 81, 45, 1) 8%, rgba(161, 128, 61, 1) 16%, rgba(234, 204, 142, 1) 26%, rgba(234, 204, 142, 1) 38%, rgba(136, 103, 53, 1) 45%, rgba(208, 175, 106, 1) 52%, rgba(139, 90, 53, 1) 64%, rgba(198, 164, 120, 1) 75%, rgba(164, 135, 80, 1) 84%, rgba(172, 140, 75, 1) 93%, rgba(97, 65, 39, 1) 99%);
+	-webkit-background-clip: text;
+
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25)) brightness(120%);
+
+	transition: background 3s ease-in-out, background 3s ease-in-out;
+
+	pointer-events: auto;
+
+}
+
+.btn-gold:hover {
+	text-decoration: none;
+	color: #a17c45;
 }
 
 
 section .cart-menu {
 
+	pointer-events: auto;
+
 	.free-shipping {
 		font-family: "FSoda-SemiBold";
 	}
-	
-    width: 300px;
-    margin-top: 30pt;
 
-    @include media-breakpoint-down(md) {
-        width: 100%!important;
-    }
+	margin-right: 50px;
+	width: 250px;
+	float: left;
 
-	font-family:FSoda-Regular, "Roboto Slab", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	@include media-breakpoint-down(md) {
+		width: 100% !important;
+	}
+
+	@include media-breakpoint-down(md) {
+		float: none;
+	}
+
+	font-family:Zwizz Regular,
+	"Roboto Slab",
+	-apple-system,
+	system-ui,
+	"Segoe UI",
+	Roboto,
+	"Helvetica Neue",
+	Arial,
+	sans-serif,
+	"Apple Color Emoji",
+	"Segoe UI Emoji",
+	"Segoe UI Symbol",
+	"Noto Color Emoji";
 	font-size:22.4px;
 	font-weight:400;
+
 	.item {
 		text-align: left;
 	}
+
 	.price {
 		text-align: right;
 	}
+
 	.tool {
 		font-family: "Zwizz SemiBold";
 		border: 3px solid black;
@@ -79,16 +113,18 @@ section .cart-menu {
 		button {
 			background-color: transparent;
 			border: 0;
-			
+
 		}
+
 		button:focus {
-			outline: 0px!important;
+			outline: 0px !important;
 		}
 	}
+
 	.btn-gold {
-    	margin-top: 0;
+		margin-top: 0;
 		width: 100%;
-		filter: brightness(120%);
+		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25)) brightness(120%);
 	}
 }
 
@@ -97,17 +133,22 @@ section .cart-menu {
 
 
 #sideShop .cart-menu {
-    max-width: 300px;
-    min-width: 250px;
+	max-width: 300px;
+	min-width: 250px;
+	pointer-events: auto;
+
 	.item {
 		text-align: left;
 	}
+
 	.price {
 		text-align: right;
 	}
+
 	button {
 		width: 100%;
 	}
+
 	.tool {
 		margin-bottom: 3px;
 		padding: 2px 4px 2px 4px;
@@ -116,10 +157,16 @@ section .cart-menu {
 		button {
 			background-color: transparent;
 			border: 0;
-			
+
 		}
+
 		button:focus {
-			outline: 0px!important;
+			outline: 0px !important;
 		}
 	}
+}
+
+button {
+	-webkit-appearance: none;
+
 }
