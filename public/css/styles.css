@@ -10162,14 +10162,15 @@ button:focus {
   padding: 0;
   border-radius: 100%;
   pointer-events: auto;
+  text-align: left;
 }
 
 .btn-gold {
-  color: #886735;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   background: none;
   text-decoration: inherit;
   padding: 5px 15px 0px 15px;
-  margin-top: 30pt;
   margin-bottom: 10pt;
   border: 6px solid;
   border-image-slice: 1;
@@ -10179,11 +10180,19 @@ button:focus {
   font-family: "Zwizz ExtraBold";
   font-size: 1.7rem;
   background: -webkit-linear-gradient(30deg, #614127 0%, #72512d 8%, #a1803d 16%, #eacc8e 26%, #eacc8e 38%, #886735 45%, #d0af6a 52%, #8b5a35 64%, #c6a478 75%, #a48750 84%, #ac8c4b 93%, #614127 99%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25)) brightness(120%);
           filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25)) brightness(120%);
   transition: background 3s ease-in-out, background 3s ease-in-out;
   pointer-events: auto;
+}
+
+.btn-gold-button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  width: 100%;
 }
 
 .btn-gold:hover {
@@ -10417,12 +10426,6 @@ input.form-control:focus {
   display: inline-block;
   font-family: "Zwizz SemiBold";
 }
-@media (max-width: 991.98px) {
-  #mainNav #openCart .itemsInCart {
-    display: none;
-  }
-}
-
 #sideMenu {
   height: 100%;
   width: 0;
@@ -10760,6 +10763,9 @@ input.form-control:focus {
   position: absolute;
   width: 100vw;
   min-height: 580px;
+  overflow: hidden;
+  z-index: 50000;
+  pointer-events: none;
 }
 @media (max-width: 991.98px) {
   .bubble-container {
@@ -10778,10 +10784,11 @@ input.form-control:focus {
   height: 50px;
   width: 50px;
   opacity: 0.5;
-  left: -5%;
+  left: -10%;
   -webkit-animation: moveBubble 14.5s linear 0s infinite;
           animation: moveBubble 14.5s linear 0s infinite;
   background-size: cover;
+  pointer-events: auto;
 }
 
 section.soda-section .bubble p {
@@ -10815,11 +10822,23 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   left: 314px;
   top: 137px;
 }
+@media (max-width: 991.98px) {
+  .bg-blood-orange#details .bubble-bottle-container {
+    left: 259px;
+    top: 107px;
+  }
+}
 
 .bg-pink-lemonade#details .bubble-bottle-container {
   position: absolute;
   left: 314px;
   top: 90px;
+}
+@media (max-width: 991.98px) {
+  .bg-pink-lemonade#details .bubble-bottle-container {
+    left: 281px;
+    top: 76px;
+  }
 }
 
 .bg-passion-fruit#details .bubble-bottle-container {
@@ -10827,17 +10846,35 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   left: 304px;
   top: 137px;
 }
+@media (max-width: 991.98px) {
+  .bg-passion-fruit#details .bubble-bottle-container {
+    left: 264px;
+    top: 113px;
+  }
+}
 
 .bg-lemon#details .bubble-bottle-container {
   position: absolute;
   left: 265px;
   top: 116px;
 }
+@media (max-width: 991.98px) {
+  .bg-lemon#details .bubble-bottle-container {
+    left: 264px;
+    top: 119px;
+  }
+}
 
 .bg-ginger-beer#details .bubble-bottle-container {
   position: absolute;
   left: 314px;
   top: 100px;
+}
+@media (max-width: 991.98px) {
+  .bg-ginger-beer#details .bubble-bottle-container {
+    left: 278px;
+    top: 84px;
+  }
 }
 
 .bubble-bottle {
@@ -10894,7 +10931,7 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 /* Animations */
 @-webkit-keyframes moveBubble {
   0% {
-    left: -5%;
+    left: -10%;
   }
   100% {
     left: 100%;
@@ -10902,7 +10939,7 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 }
 @keyframes moveBubble {
   0% {
-    left: -5%;
+    left: -10%;
   }
   100% {
     left: 100%;
@@ -11026,6 +11063,7 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
+  padding-top: 30pt;
 }
 @media (min-width: 992px) {
   #details .info {
@@ -11044,6 +11082,9 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   }
 }
 @media (max-width: 991.98px) {
+  #details {
+    padding-top: 0pt;
+  }
   #details .info {
     padding-top: 90pt;
   }
@@ -11136,6 +11177,20 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 #apply-vip .info h4 {
   font-size: 2rem;
   margin-bottom: 0;
+}
+#famous-vip .info button,
+#apply-vip .info button {
+  text-align: right;
+}
+@media (max-width: 991.98px) {
+  #famous-vip .hero-image,
+#apply-vip .hero-image {
+    min-height: 400px;
+  }
+  #famous-vip .info button,
+#apply-vip .info button {
+    text-align: center;
+  }
 }
 
 #apply-vip {
@@ -11237,11 +11292,15 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   #famous-vip .info {
     padding-top: 90pt;
   }
+  #famous-vip input {
+    width: 100%;
+  }
 }
 
 @media (max-width: 991.98px) {
-  #apply-vip {
-    min-height: 100vh;
+  #apply-vip button,
+#apply-vip .btn-gold {
+    width: 100%;
   }
 }
 
@@ -11439,6 +11498,7 @@ section.soda-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 section.soda-section .container {
   height: 100% !important;
@@ -11480,6 +11540,8 @@ section.soda-section .product-header {
 }
 section.soda-section .bottle {
   position: relative;
+  height: 100%;
+  min-height: 550px;
 }
 section.soda-section .bottle-shadow,
 section.soda-section .bottle-hero {
@@ -11500,6 +11562,7 @@ section.soda-section .price p {
 }
 section.soda-section .bottle-details {
   padding: 0px;
+  height: 100%;
 }
 section.soda-section .bottle-box,
 section.soda-section .bottle-single {
@@ -11676,6 +11739,9 @@ section#details .info {
 #newsletter {
   min-height: 300px;
 }
+#newsletter button {
+  text-align: right;
+}
 @media (max-width: 991.98px) {
   #newsletter {
     padding-bottom: 30pt;
@@ -11683,7 +11749,9 @@ section#details .info {
   #newsletter h2 {
     font-size: 1.5rem;
   }
-  #newsletter input {
+  #newsletter button,
+#newsletter span {
+    text-align: center;
     width: 100%;
   }
 }

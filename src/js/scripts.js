@@ -393,7 +393,7 @@ var SodaShop = function () {
 			completeCheckout(function (error, webUrl) {
 				$("#goToShopify").prop('disabled', false);
 				if (error) return console.log(error);
-				window.open(webUrl);
+				window.open(webUrl, "_self");
 			})
 		})
 
@@ -892,7 +892,7 @@ $(".bubble").each(function (index) {
 function assignInitValueToBubble(index) {
 	index.css("animation-play-state", "play");
 	index.css("background-image", "");
-	index.css("top", randomIntFromInterval(0, 100) + "%");
+	index.css("top", randomIntFromInterval(0, 90) + "%");
 	var scale = randomIntFromInterval(30, 70);
 	index.css("height", scale + "px");
 	index.css("width", scale + "px");
@@ -914,11 +914,11 @@ function assignInitValueToBubble(index) {
 function resetPosition(index) {
 	index.css("animation-play-state", "play");
 	index.css("background-image", "");
-	index.css("top", randomIntFromInterval(10, 70) + "%");
+	index.css("top", randomIntFromInterval(0, 90) + "%");
 	var scale = randomIntFromInterval(30, 70);
 	index.css("height", scale + "px");
 	index.css("width", scale + "px");
-	index.css("left", "-5%");
+	index.css("left", "-10%");
 	index.css("animation-duration", randomIntFromInterval(10, 15) + "s");
 	index.css("animation-delay", "0s");
 
@@ -1153,10 +1153,58 @@ window.mapInit = function () {
 	}];
 
 	var shopList = [{
-			infoWindow: "SALT MEATS CHEESE BONDI JUNCTION",
-			address: "Shop 1027/500 Oxford Street, Bondi Junction NSW 2022",
-			lat: -33.8928666,
-			lon: 151.2503759
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "11 Kennedy St Kingston, ACT 2604",
+			lat: -35.316210,
+			long: 149.140530
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "Shop 30, 142/148 Summer St, Orange NSW 2800",
+			lat: -33.282220,
+			long: 149.089950
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "The Junction Fair, 200 Union Street, Merewether NSW 2291",
+			lat: -32.937810,
+			long: 151.759060
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "The Pacific, 180 Campbell Parade, Bondi Beach NSW 2026",
+			lat: -33.889140,
+			long: 151.275670
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "10 Park Street Shop 6, Mona Vale NSW 2103",
+			lat: -33.675820,
+			long: 151.305650
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "14 Spit Road, Mosman NSW 2088",
+			lat: -33.824140,
+			long: 151.240870
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "Tanglin Mall, #02-17/ 18, 163 Tanglin Rd, Singapore 247933",
+			lat: 1.294220,
+			long: 103.830700
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "Great World City, 1 Kim Seng Promenade, Great World, #01-148, Singapore S237994",
+			lat: 1.292880,
+			long: 103.832310
+		},
+		{
+			infoWindow: "SCOOP WHOLEFOODS",
+			address: "Paya Lebar Quarter, #B1-07/08/09 10 Paya Lebar Road, Singapore 409057",
+			lat: 1.317490,
+			long: 103.892820
 		},
 		{
 			infoWindow: "THE LONDON HOTEL",

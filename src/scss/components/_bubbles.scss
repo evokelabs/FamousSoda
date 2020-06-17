@@ -2,6 +2,9 @@
     position: absolute;
     width: 100vw;
     min-height: 580px;
+    overflow: hidden;
+    z-index: 50000;
+    pointer-events: none;
 
     @include media-breakpoint-down(md) {
         min-height: 100%;
@@ -19,9 +22,10 @@
     height: 50px;
     width: 50px;
     opacity: 0.5;
-    left: -5%;
+    left: -10%;
     animation: moveBubble 14.5s linear 0s infinite;
     background-size: cover;
+    pointer-events: auto;
 
 }
 
@@ -56,30 +60,55 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
     position: absolute;
     left: 314px;
     top: 137px;
+
+    @include media-breakpoint-down(md) {
+        left: 259px;
+        top: 107px;
+    }
 }
 
 .bg-pink-lemonade#details .bubble-bottle-container {
     position: absolute;
     left: 314px;
     top: 90px;
+
+    @include media-breakpoint-down(md) {
+        left: 281px;
+        top: 76px;
+    }
 }
 
 .bg-passion-fruit#details .bubble-bottle-container {
     position: absolute;
     left: 304px;
     top: 137px;
+
+    @include media-breakpoint-down(md) {
+        left: 264px;
+        top: 113px;
+    }
 }
 
 .bg-lemon#details .bubble-bottle-container {
     position: absolute;
     left: 265px;
     top: 116px;
+
+    @include media-breakpoint-down(md) {
+        left: 264px;
+        top: 119px;
+    }
 }
 
 .bg-ginger-beer#details .bubble-bottle-container {
     position: absolute;
     left: 314px;
     top: 100px;
+
+    @include media-breakpoint-down(md) {
+        left: 278px;
+        top: 84px;
+    }
 }
 
 
@@ -132,7 +161,7 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 /* Animations */
 @keyframes moveBubble {
     0% {
-        left: -5%;
+        left: -10%;
     }
 
     100% {

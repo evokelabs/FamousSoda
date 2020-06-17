@@ -17,20 +17,19 @@
 	padding: 0;
 	border-radius: 100%;
 	pointer-events: auto;
+	text-align: left;
 }
 
 .btn-gold {
-	// Webkit backgound clip/text-fill-color working on Iphone, must roll back to color
-	// -webkit-text-fill-color: transparent;
-	color: #886735;
-	//-----------
 
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
 	background: none;
 
 	text-decoration: inherit;
 	padding: 5px 15px 0px 15px;
 
-	margin-top: 30pt;
+	// margin-top: 30pt;
 	margin-bottom: 10pt;
 	border: 6px solid;
 	border-image-slice: 1;
@@ -42,6 +41,7 @@
 	font-family: 'Zwizz ExtraBold';
 	font-size: 1.7rem;
 	background: -webkit-linear-gradient(30deg, rgba(97, 65, 39, 1) 0%, rgba(114, 81, 45, 1) 8%, rgba(161, 128, 61, 1) 16%, rgba(234, 204, 142, 1) 26%, rgba(234, 204, 142, 1) 38%, rgba(136, 103, 53, 1) 45%, rgba(208, 175, 106, 1) 52%, rgba(139, 90, 53, 1) 64%, rgba(198, 164, 120, 1) 75%, rgba(164, 135, 80, 1) 84%, rgba(172, 140, 75, 1) 93%, rgba(97, 65, 39, 1) 99%);
+	background-clip: text;
 	-webkit-background-clip: text;
 
 	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25)) brightness(120%);
@@ -50,6 +50,13 @@
 
 	pointer-events: auto;
 
+}
+
+.btn-gold-button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	width: 100%;
 }
 
 .btn-gold:hover {

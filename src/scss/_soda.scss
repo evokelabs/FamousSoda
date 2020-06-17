@@ -4,6 +4,7 @@ section.soda-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 
 	.container {
 		height: 100% !important;
@@ -51,6 +52,8 @@ section.soda-section {
 
 	.bottle {
 		position: relative;
+		height: 100%;
+		min-height: 550px;
 
 	}
 
@@ -78,6 +81,7 @@ section.soda-section {
 
 	.bottle-details {
 		padding: 0px;
+		height: 100%;
 	}
 
 	.bottle-box,
@@ -310,12 +314,18 @@ section#details .info {
 #newsletter {
 	min-height: 300px;
 
+	button {
+		text-align: right;
+	}
+
 	@include media-breakpoint-down(md) {
 		h2 {
 			font-size: 1.5rem;
 		}
 
-		input {
+		button,
+		span {
+			text-align: center;
 			width: 100%;
 		}
 

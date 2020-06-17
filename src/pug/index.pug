@@ -8,7 +8,7 @@ body#page-top
     include ../pug-includes/shop.pug
     // First Blocks
     section#home.soda-section
-      video(autoplay='autoplay' muted="muted" loop)
+      video(autoplay='autoplay' muted="muted" loop playsinline)
         source(src='assets/videos/home-sm.mp4', type='video/mp4').sizing
       .container
         .row
@@ -134,7 +134,8 @@ body#page-top
               div(style='position: absolute; left: -5000px;' aria-hidden='true')
                 input(type='text' name='b_da4a1b4bd46096e992e2fe7f2_d904db5485' tabindex='-1' value='')
               .clear.mt-4.text-right
-                input#mc-embedded-subscribe.btn-gold(type='submit' value='SUBMIT' name='SUBMIT')
+                button.btn-gold-button#mc-embedded-subscribe(type='submit' value='SUBMIT' name='SUBMIT')
+                  span.btn-gold SUBMIT
     section#stores.soda-section.bg-want-you
       .container
         .row

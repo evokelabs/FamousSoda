@@ -34,7 +34,8 @@ body#page-top
                 .col-8.total 1
                 .col-2 
                   button.add(type="button") +
-              button.btn-gold.btn-gold-brightnessfilter(type='button') BUY NOW
+              button.btn-gold-button(type='button')
+                span.btn-gold BUY NOW
             p.free-shipping.extra-bold FREE SHIPPING!
             p.free-shipping-details
               small *$5 surcharge may be applied at checkout for delivery to remote and regional areas
@@ -127,7 +128,7 @@ body#page-top
             .row.table-gold
               .col= product.ingredients
           .col-lg-5.col-md-12.col-sm-12.video
-            video(autoplay='autoplay' loop)
+            video(autoplay='autoplay' muted='muted' loop playsinline)
               source(src='assets/videos/'+product.code+'-sm.mp4', type='video/mp4').sizing
     include ../pug-includes/footer.pug
   // Bootstrap core JS

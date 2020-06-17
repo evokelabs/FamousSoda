@@ -1,8 +1,11 @@
 #details {
 
 	min-height: fit-content;
+	padding-top: 30pt;
+
 
 	@include media-breakpoint-up(lg) {
+
 		.info {
 			margin-left: 0;
 			margin-right: auto;
@@ -23,6 +26,8 @@
 	}
 
 	@include media-breakpoint-down(md) {
+
+		padding-top: 0pt;
 
 		.info {
 			padding-top: 90pt;

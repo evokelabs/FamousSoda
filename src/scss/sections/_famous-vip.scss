@@ -12,6 +12,25 @@
             font-size: 2rem;
             margin-bottom: 0;
         }
+
+        button {
+            text-align: right;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+
+        .hero-image {
+            min-height: 400px;
+        }
+
+        .info {
+
+            button {
+                text-align: center;
+            }
+        }
+
     }
 }
 
@@ -69,6 +88,8 @@
         }
 
         padding-bottom: 30pt;
+
+
     }
 
     #mc-embedded-subscribe {
@@ -108,6 +129,10 @@
         .info {
             padding-top: 90pt;
         }
+
+        input {
+            width: 100%;
+        }
     }
 }
 
@@ -115,10 +140,15 @@
 
     @include media-breakpoint-down(md) {
 
-        min-height: 100vh;
-
+        button,
+        .btn-gold {
+            width: 100%;
+        }
     }
+
 }
+
+
 
 #how-to-get-started {
 
