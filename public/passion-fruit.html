@@ -11,11 +11,11 @@
 </head>
 <body id="page-top">
     <div id="wrap">
-        <div id="sideMenu"><a class="closebtn golden-text">&times;</a><a class="stars">THE STARS</a><a href="blood-orange.html">Blood Orange</a><a href="pink-lemonade.html">Pink Lemonade</a><a href="passion-fruit.html">Passionfruit</a><a href="lemon.html">Lemon</a><a href="ginger-beer.html">Ginger Beer</a><br /><a class="stars" href="index.html">HOME</a></div>
+        <div id="sideMenu"><a class="closebtn golden-text">&times;</a><a class="stars">THE STARS</a><a href="blood-orange.html">Blood Orange</a><a href="pink-lemonade.html">Pink Lemonade</a><a href="passion-fruit.html">Passionfruit</a><a href="lemon.html">Lemon</a><a href="ginger-beer.html">Ginger Beer</a><br /><a class="stars" href="index.html">HOME</a><a href="famous-vip.html">Famous Soda Society</a></div>
         <!-- Navigation-->
         <nav class="navbar fixed-top" id="mainNav">
             <div class="container">
-                <button class="navbar-toggler" id="openMenu" type="button">
+                <button class="navbar-toggler menu-button" id="openMenu" type="button">
                     <svg class="svg-inline--fa fa-bars fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 300 420" preserveAspectRatio="none" xml:space="preserve">
                         <linearGradient id="navbar-golden-1" gradientUnits="userSpaceOnUse" x1="-78.377" y1="671.7497" x2="-64.263" y2="671.7497" gradientTransform="matrix(32.0248 0 0 -32.0248 2513.0088 21541.5)">
                             <stop offset="0" style="stop-color: #774619;"></stop>
@@ -121,9 +121,8 @@
             </div>
         </nav>
         <div id="sideShop">
-            <a class="closebtn">
-                <svg class="svg-inline--fa fa-less-than fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="less-than" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M365.46 357.74L147.04 255.89l218.47-101.88c16.02-7.47 22.95-26.51 15.48-42.53l-13.52-29C360 66.46 340.96 59.53 324.94 67L18.48 209.91a32.014 32.014 0 0 0-18.48 29v34.24c0 12.44 7.21 23.75 18.48 29l306.31 142.83c16.06 7.49 35.15.54 42.64-15.52l13.56-29.08c7.49-16.06.54-35.15-15.53-42.64z"></path></svg>&nbsp; CART</a
-            >
+            <a class="closebtn cart-close golden-text">&times;</a>
+            <div class="itemLineCart">CART</div>
             <div id="cartItems"></div>
             <div id="cartTemplate">
                 <div class="itemLine hidden">
@@ -147,7 +146,7 @@
             </div>
             <div id="cartItems"></div>
             <div class="subTotal">
-                <h2>&nbsp; Subtotal: &nbsp; &nbsp; &nbsp; <span class="amount"></span></h2>
+                <h2>Subtotal: &nbsp; &nbsp; &nbsp; <span class="amount"></span></h2>
                 <div class="action-button">
                     <button class="btn-gold-button" id="goToShopify"><span class="btn-gold">CHECK OUT</span></button>
                 </div>
@@ -182,10 +181,10 @@
                             </div>
                             <button class="btn-gold-button" type="button"><span class="btn-gold">BUY NOW</span></button>
                         </div>
-                        <p class="free-shipping extra-bold">FREE SHIPPING!</p>
+                        <p class="free-shipping extra-bold">FREE SHIPPING*</p>
                         <p class="free-shipping-details"><small>*$5 surcharge may be applied at checkout for delivery to remote and regional areas</small></p>
                     </div>
-                    <div class="col-lg-5 col-md-12 col-sm-12 hero-image blk">
+                    <div class="col-lg-5 col-md-12 col-sm-12 hero-image hero-image-product blk">
                         <div class="bottle-details">
                             <img class="bottle-shadow" src="assets/images/passion-fruit-shadow.png" /><img class="bottle-hero" src="assets/images/passion-fruit-hero.png" />
                             <div class="bottle-sparkle"><div class="sparkle"></div></div>
@@ -212,22 +211,22 @@
                             <div class="col-lg-3 col-xl-3 col-6">
                                 <img class="golden-text" src="assets/images/zero-sugar.svg" />
                                 <h4>Zero<br />sugar</h4>
-                                <p>All of our sodas are sugar free. That’s right, they’re sweet enough. Thanks to the natural sweeteners we use derived from fabulous fruits.</p>
+                                <p>Famous Sodas are 100% sugar free. We source the highest quality ingredients and natural sweeteners derived from plants.</p>
                             </div>
                             <div class="col-lg-3 col-xl-3 col-6">
                                 <img class="golden-text" src="assets/images/natural.svg" />
                                 <h4>100%<br />Natural</h4>
-                                <p>At the Famous Soda Co., we don’t do fake. Nasty additives and preservatives do not get past security, we can promise you that</p>
+                                <p>We dont believe in fake. No chemicals, additives or preservatives get past security. If it’s not natural, it doesn’t make the cut.</p>
                             </div>
                             <div class="col-lg-3 col-xl-3 col-6">
                                 <img class="golden-text" src="assets/images/australian-made.svg" />
                                 <h4>Australian<br />Made</h4>
-                                <p>Kylie, Hugh, Nicole... We love our famous Australians. And that’s why all our sodas are made right here on Australian soil.</p>
+                                <p>Now more than ever taking care of your health and those who you love has never been more important. We think Australian Made, should take front & centre stage.</p>
                             </div>
                             <div class="col-lg-3 col-xl-3 col-6">
                                 <img class="golden-text" src="assets/images/8-calories.svg" />
                                 <h4>Only 8<br />Calories</h4>
-                                <p>Famous Soda Co. does not endorse any behaviour that denies oneself from pleasure. Which is why all our drinks contain a teensy 8 calories per serve.</p>
+                                <p>We do not endorse any behaviour that denies oneself from pleasure. An apple has 52 calories in comparison to our sodas which contain only 8.</p>
                             </div>
                         </div>
                     </div>

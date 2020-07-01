@@ -20,3 +20,9 @@
         font-weight: 900;
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .table-gold {
+        margin: 0 1px 10px;
+    }
+}

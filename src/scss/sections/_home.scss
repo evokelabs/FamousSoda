@@ -15,41 +15,44 @@
 		height: 100%;
 		overflow: hidden;
 		z-index: 10;
-		/*
-		min-height: 100vh;
-		max-height: 100vh;
-		max-width: 100vw;
-		max-width: 100vw;
-		*/
-		/*
-		@include media-breakpoint-down(md) {
-			//min-width: 100vw;
-			//min-height: 100vh;
-			width: 100vw;
-			height: 100vh;
-			overflow: hidden;
-		}
-		@include media-breakpoint-up(lg) {
-			min-width: 100vw;
-			max-width: 100vw;
-		}
-		*/
 		object-fit: cover;
 	}
 
 	.info {
 		z-index: 50;
-		padding-top: 115px;
+		padding: 0;
 	}
 
-	/*
-	@include media-breakpoint-down(md) {
+	.home-heading {
+		padding-top: 130px;
+	}
+
+	h1 {
+		letter-spacing: 0rem;
+		font-family: 'FSoda-Regular';
+		font-size: 4rem;
+	}
+
+	h5 {
+		font-size: 1.7rem;
+		font-family: 'FSoda-Regular';
+	}
+
+	@include media-breakpoint-down(sm) {
+
+		.home-heading {
+			padding: 120px 10px 0 10px;
+		}
+
+		h1 {
+			font-size: 3.25rem;
+		}
+
 		h5 {
-			position: absolute;
-			bottom: 0px;
+			font-size: 1.5rem;
 		}
 	}
-*/
+
 }
 
 #brand h2 {
