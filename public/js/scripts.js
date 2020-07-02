@@ -538,20 +538,13 @@ var SodaShop = function () {
 		});
 
 		function getCheckout(checkoutId) {
-			if (!checkoutId) {
-				client.checkout.create()
-					.then(addItems)
-					.catch(() => {
-						return cb("unable to create a checkout")
-					})
-			} else {
-				client.checkout.fetch(checkoutId)
-					.then(addItems)
-					.catch(() => {
-						localStorage.removeItem('checkoutId');
-						getCheckout()
-					})
-			}
+
+			client.checkout.create()
+				.then(addItems)
+				.catch(() => {
+					return cb("unable to create a checkout")
+
+				})
 		}
 
 		function addItems(checkout) {
