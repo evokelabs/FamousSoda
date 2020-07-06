@@ -11053,11 +11053,12 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 }
 #home h1 {
   letter-spacing: 0rem;
-  font-family: "FSoda-Regular";
   font-size: 4rem;
+  color: white;
 }
 #home h5 {
   font-size: 1.7rem;
+  color: white;
   font-family: "FSoda-Regular";
 }
 @media (max-width: 767.98px) {
@@ -11080,7 +11081,10 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  padding-top: 30pt;
+  padding-top: 45pt;
+}
+#details .info {
+  padding-bottom: 45pt;
 }
 @media (min-width: 992px) {
   #details .info {
@@ -11791,10 +11795,6 @@ section.soda-section .hero-image img {
   left: 0;
   width: 100vw;
   height: 100vh;
-}
-
-section#details .info {
-  padding-bottom: 30pt;
 }
 
 @media (max-width: 767.98px) {

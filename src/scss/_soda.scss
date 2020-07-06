@@ -314,10 +314,6 @@ section.soda-section {
 	height: 100vh;
 }
 
-section#details .info {
-	padding-bottom: 30pt;
-}
-
 @include media-breakpoint-down(sm) {
 	section#details .info {
 		padding-bottom: 0pt;
