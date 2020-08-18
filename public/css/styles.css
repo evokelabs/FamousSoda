@@ -11027,10 +11027,11 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 #home {
   width: 100vw;
   height: 100vh;
-  height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
   margin: 0;
   padding: 0;
   justify-content: flex-start;
+  background: #f26331;
 }
 #home video,
 #home img {
@@ -11082,6 +11083,9 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   min-height: -moz-fit-content;
   min-height: fit-content;
   padding-top: 45pt;
+}
+#details .add-to-cart {
+  letter-spacing: 0;
 }
 #details .info {
   padding-bottom: 45pt;

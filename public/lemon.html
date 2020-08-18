@@ -8,6 +8,44 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--script(src='https://use.fontawesome.com/releases/v5.12.1/js/all.js' crossorigin='anonymous')-->
     <link href="css/styles.min.css" rel="stylesheet" />
+    <!-- Start Facebook Pixel Code -->
+    <script type="text/javascript">
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[7] = 'MMERGE7';
+            ftypes[7] = 'text';
+        })(jQuery);
+        var $mcj = jQuery.noConflict(true);
+    </script>
+    <script type="text/javascript">
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2805297326240942');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=2805297326240942&amp;ev=PageView&amp;noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 <body id="page-top">
     <div id="wrap">
@@ -179,7 +217,7 @@
                                 <div class="col-8 total">1</div>
                                 <div class="col-2"><button class="add" type="button">+</button></div>
                             </div>
-                            <button class="btn-gold-button" type="button"><span class="btn-gold">BUY NOW</span></button>
+                            <button class="btn-gold-button" type="button"><span class="btn-gold add-to-cart">ADD TO CART</span></button>
                         </div>
                         <p class="free-shipping extra-bold">FREE SHIPPING*</p>
                         <p class="free-shipping-details"><small>*$5 surcharge may be applied at checkout for delivery to remote and regional areas</small></p>
