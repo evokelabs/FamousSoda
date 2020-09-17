@@ -22,7 +22,12 @@ body#page-top
             h1.product-header= product.name
             h2=product.slogan
             p.mb-4=product.shopdescription
-            .cart-menu(data-uuid=product.code)
+            .cart-menu(class=product.stock ? "" : "no-stock" data-uuid=product.code)
+              .out-of-stock(class=product.stock ? "hide-display" : "")
+                p.extra-bold
+                  | BACK IN <br />
+                  | STOCK <br />
+                  | SOON!
               .row
                 .col.item 
                   p.extra-bold 12 pack

@@ -76,6 +76,7 @@ section .cart-menu {
 	margin-right: 50px;
 	width: 250px;
 	float: left;
+	position: relative;
 
 	@include media-breakpoint-down(md) {
 		width: 100% !important;
