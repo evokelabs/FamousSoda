@@ -207,8 +207,8 @@
                         <h1 class="product-header">Blood Orange</h1>
                         <h2>La Dolce Soda.</h2>
                         <p class="mb-4">Imagine the sun on your back, warm breeze, feet in the sand… One sip of this showstopper will transport you straight to the Southern Mediterranean coast. Drenched with ruby red tinges and dripping with orange nectar, this star lets the citrus, and unbeatable European taste do the talking.</p>
-                        <div class="cart-menu" data-uuid="blood-orange">
-                            <div class="out-of-stock hide-display">
+                        <div class="cart-menu no-stock" data-uuid="blood-orange">
+                            <div class="out-of-stock">
                                 <p class="extra-bold">
                                     BACK IN <br />
                                     STOCK <br />
@@ -225,10 +225,12 @@
                                 <div class="col-2"><button class="add" type="button">+</button></div>
                             </div>
                             <button class="btn-gold-button" type="button"><span class="btn-gold add-to-cart">ADD TO CART</span></button>
-                            <p class="free-shipping extra-bold mb-0">FREE SHIPPING*</p>
-                            <p class="free-shipping-details"><small>*$5 surcharge may be applied at checkout for delivery to remote and regional areas</small></p>
-                            <p class="free-shipping-details mb-0"><small>No shipping to PO Box Addresses </small></p>
-                            <p class="free-shipping-details mb-0"><small>Due to COVID 19 we are experiencing delays in deliveries</small></p>
+                            <div class="hide-display" id="sold-out" :>
+                                <p class="free-shipping extra-bold mb-0">FREE SHIPPING*</p>
+                                <p class="free-shipping-details"><small>*$5 surcharge may be applied at checkout for delivery to remote and regional areas</small></p>
+                                <p class="free-shipping-details mb-0"><small>No shipping to PO Box Addresses </small></p>
+                                <p class="free-shipping-details mb-0"><small>Due to COVID 19 we are experiencing delays in deliveries</small></p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 hero-image hero-image-product blk">
