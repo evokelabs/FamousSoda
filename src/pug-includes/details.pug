@@ -32,7 +32,7 @@ body#page-top
                 .col.item 
                   p.extra-bold 12 pack
                 .col.price 
-                  p.extra-bold $49.99
+                  p.extra-bold $44.99
               .tool.row.no-gutters
                 .col-2
                   button.rem(type='button') -
@@ -41,13 +41,13 @@ body#page-top
                   button.add(type="button") +
               button.btn-gold-button(type='button')
                 span.btn-gold.add-to-cart ADD TO CART
+              p.free-shipping.extra-bold.mb-0 FREE SHIPPING*
+              p.free-shipping-details
+                small *$5 surcharge may be applied at checkout for delivery to remote and regional areas
               p.free-shipping-details.mb-0
                 small No shipping to PO Box Addresses 
               p.free-shipping-details.mb-0
                 small Due to COVID 19 we are experiencing delays in deliveries
-              p.free-shipping.extra-bold FREE SHIPPING*
-              p.free-shipping-details.mb-0
-                small *$5 surcharge may be applied at checkout for delivery to remote and regional areas
             //- p.free-shipping.extra-bold FREE SHIPPING*
             //- p.free-shipping-details
             //-   small *$5 surcharge may be applied at checkout for delivery to remote and regional areas
@@ -63,7 +63,11 @@ body#page-top
                 .bubble-bottle
                 .bubble-bottle
                 .bubble-bottle
-      .gradient(class='gradient-details')
+      //.gradient(class='gradient-details')
+      .gradient(class='gradient-details-'+product.code)
+    //reviewSection
+    section#reviews.soda-section.pt-5(class='reviews-bg-'+product.code)
+      include ../pug-includes/reviews.pug
     // why famous WHITE
     section#whyFamous.soda-section.bg-black
       .container

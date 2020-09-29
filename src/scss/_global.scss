@@ -105,7 +105,7 @@ img::-moz-selection {
 }
 
 .gradient-ginger-beer {
-    background-image: linear-gradient(#f2d196, #000);
+    background-image: linear-gradient(#f2d196, #fff);
     // background-image: linear-gradient(#f2d196, #ef90a0);
 }
 
@@ -139,9 +139,57 @@ img::-moz-selection {
     background-image: linear-gradient(#000, #fff);
 }
 
+.gradient-white {
+    background-image: linear-gradient(#FFF, #000);
+}
+
 .gradient-details {
     background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
 }
+
+.gradient-details-blood-orange {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #f26231);
+}
+
+.gradient-details-passion-fruit {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #f7b14f);
+}
+
+.gradient-details-pink-lemonade {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #ef90a0);
+}
+
+.gradient-details-lemon {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #f1d638);
+}
+
+.gradient-details-ginger-beer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #edc37f);
+}
+
+.reviews-bg-blood-orange {
+    background: #f26231;
+}
+
+.reviews-bg-passion-fruit {
+    background: #f7b14f;
+}
+
+
+.reviews-bg-pink-lemonade {
+    background: #ef90a0;
+}
+
+
+.reviews-bg-lemon {
+    background: #f1d638;
+}
+
+
+.reviews-bg-ginger-beer {
+    background: #edc37f;
+}
+
 
 .gradient-whyfamous {
     background-image: linear-gradient(#000, (rgba(0, 0, 0, 0)));

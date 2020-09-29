@@ -10078,7 +10078,7 @@ img::-moz-selection {
 }
 
 .gradient-ginger-beer {
-  background-image: linear-gradient(#f2d196, #000);
+  background-image: linear-gradient(#f2d196, #fff);
 }
 
 .gradient-pink-lemonade-vip {
@@ -10109,8 +10109,52 @@ img::-moz-selection {
   background-image: linear-gradient(#000, #fff);
 }
 
+.gradient-white {
+  background-image: linear-gradient(#FFF, #000);
+}
+
 .gradient-details {
   background-image: linear-gradient(rgba(0, 0, 0, 0), #000);
+}
+
+.gradient-details-blood-orange {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #f26231);
+}
+
+.gradient-details-passion-fruit {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #f7b14f);
+}
+
+.gradient-details-pink-lemonade {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #ef90a0);
+}
+
+.gradient-details-lemon {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #f1d638);
+}
+
+.gradient-details-ginger-beer {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #edc37f);
+}
+
+.reviews-bg-blood-orange {
+  background: #f26231;
+}
+
+.reviews-bg-passion-fruit {
+  background: #f7b14f;
+}
+
+.reviews-bg-pink-lemonade {
+  background: #ef90a0;
+}
+
+.reviews-bg-lemon {
+  background: #f1d638;
+}
+
+.reviews-bg-ginger-beer {
+  background: #edc37f;
 }
 
 .gradient-whyfamous {
@@ -10615,7 +10659,7 @@ input.form-control:focus {
 .bottle-sparkle {
   display: inline-block;
   position: relative;
-  left: 160px;
+  left: 200px;
   opacity: 0;
   transition: opacity 1.5s ease-out;
   top: 170px;
@@ -11078,70 +11122,87 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   margin-bottom: 0;
 }
 
-#details {
+#details,
+#reviews {
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
   padding-top: 45pt;
 }
-#details .add-to-cart {
+#details .add-to-cart,
+#reviews .add-to-cart {
   letter-spacing: 0;
 }
-#details .info {
+#details .info,
+#reviews .info {
   padding-bottom: 45pt;
 }
-#details .hide-display {
+#details .hide-display,
+#reviews .hide-display {
   display: none;
 }
-#details .out-of-stock {
+#details .out-of-stock,
+#reviews .out-of-stock {
   position: absolute;
   text-align: center;
   width: 100%;
   top: 35%;
   z-index: 10;
 }
-#details .out-of-stock p {
+#details .out-of-stock p,
+#reviews .out-of-stock p {
   font-size: 1.6rem;
   line-height: 1;
 }
-#details .no-stock {
+#details .no-stock,
+#reviews .no-stock {
   background-image: url(./../assets/images/bubble.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50%;
 }
 #details .no-stock button,
-#details .no-stock .btn-gold {
+#details .no-stock .btn-gold,
+#reviews .no-stock button,
+#reviews .no-stock .btn-gold {
   pointer-events: none;
 }
 #details .no-stock .tool,
-#details .no-stock .btn-gold-button {
+#details .no-stock .btn-gold-button,
+#reviews .no-stock .tool,
+#reviews .no-stock .btn-gold-button {
   opacity: 0.5;
 }
 @media (min-width: 992px) {
-  #details .info {
+  #details .info,
+#reviews .info {
     margin-left: 0;
     margin-right: auto;
   }
-  #details .video {
+  #details .video,
+#reviews .video {
     width: 50%;
     position: absolute;
     right: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
-  #details video {
+  #details video,
+#reviews video {
     padding-left: calc((100% - 1170px) / 2);
   }
 }
 @media (max-width: 991.98px) {
-  #details {
+  #details,
+#reviews {
     padding-top: 0pt;
   }
-  #details .info {
+  #details .info,
+#reviews .info {
     padding-top: 90pt;
   }
-  #details .cart-menu {
+  #details .cart-menu,
+#reviews .cart-menu {
     left: 5pt;
     right: 5pt;
     bottom: 5pt;
@@ -11173,6 +11234,36 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 #whyFamous .info {
   padding-top: 20px;
   padding-bottom: 90px;
+}
+
+#reviews {
+  padding-top: 0;
+}
+#reviews .info {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#reviews .fa-star {
+  font-size: 18px;
+}
+#reviews .review-stars {
+  width: 105px;
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
+}
+@media (max-width: 991.98px) {
+  #reviews .review-stars {
+    width: 140px;
+  }
+}
+
+#review-carousel {
+  min-height: 240px;
+}
+@media (max-width: 991.98px) {
+  #review-carousel {
+    min-height: 400px;
+  }
 }
 
 #facts .info {

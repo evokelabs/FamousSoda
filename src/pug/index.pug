@@ -103,22 +103,28 @@ body#page-top
     //-               img.bottle-single(src='assets/images/pink-lemonade-single.png')
     //-           img.bottle-box(src='assets/images/pink-lemonade-box-foreground.png')
     //-   .gradient(class='gradient-we-want-you')
-    section#brand.soda-section.bg-black.aligned
-      .container.mb-5
+   
+    section#stores.soda-section.bg-want-you
+      .container
         .row
-          .col-lg-12.mb-4.mt-2.col-sm-12
-            h2.golden-text We set out to change the world a little bit for the better.
-            h2.golden-text We’re just trying to do something right.
-          .col-lg-6.col-sm-12
-            p We set out change the world a little bit for the better.
-            p Our sugar free, all-natural formula means we’re not a guilty pleasure, we’re an innocent delight.
-            p Mixing, brewing &amp; blending all-natural ingredients requires masters of their trade and months of rigorus testing and tasting to create the magic formula.
-            p Our sodas not only taste good and look good, we can proudly say our sodas have Zero Sugar, are 100% Natural, Australian Made and only 8 Calories per bottle.
-          .col-lg-6.col-sm-12            
-            p How refreshing is that?
-            p We’ve just started our journey, we’re planning on being leaders in the “better for you space”, with more products that we look forward to sharing with you soon.
-            p In a world where you can be anything, be good to yourself.
-    .gradient(class='gradient-black')
+          .col.info
+            h1 STOCKISTS.
+            .row
+              .col-md-4.col-12.mt-4
+                .input-group.md-form.form-sm.form-2.pl-0
+                  input#searchTextField.form-control.my-0.py-1(style='flex:none' type='text' placeholder='POSTCODE OR ADDRESS' aria-label='Search')
+                  .append-search.golden-awesome
+                    svg.svg-inline--fa.fa-search.fa-w-16(aria-hidden='true' focusable='false' data-prefix='fa' data-icon='search' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512' data-fa-i2svg='')
+                      path(fill='currentColor' d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z')
+                    //i.fa.fa-search(aria-hidden='true')
+                div#renderedLocations
+                div#templateLocation.hidden
+                  div.row.no-gutters
+                    h4.golden-awesome.col-1
+                      img(src='assets/images/cart-star.png')
+                    h4.golden-text.col
+                  span.address 
+              #map.col.mt-4
     section#newsletter.soda-section.bg-white
       .container
         .row
@@ -144,27 +150,22 @@ body#page-top
               .clear.mt-4.text-right
                 button.btn-gold-button#mc-embedded-subscribe(type='submit' value='SUBMIT' name='SUBMIT')
                   span.btn-gold SUBMIT
-    section#stores.soda-section.bg-want-you
-      .container
+    .gradient(class='gradient-white')
+    section#brand.soda-section.bg-black.aligned
+      .container.mb-5
         .row
-          .col.info
-            h1 STOCKISTS.
-            .row
-              .col-md-4.col-12.mt-4
-                .input-group.md-form.form-sm.form-2.pl-0
-                  input#searchTextField.form-control.my-0.py-1(style='flex:none' type='text' placeholder='POSTCODE OR ADDRESS' aria-label='Search')
-                  .append-search.golden-awesome
-                    svg.svg-inline--fa.fa-search.fa-w-16(aria-hidden='true' focusable='false' data-prefix='fa' data-icon='search' role='img' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512' data-fa-i2svg='')
-                      path(fill='currentColor' d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z')
-                    //i.fa.fa-search(aria-hidden='true')
-                div#renderedLocations
-                div#templateLocation.hidden
-                  div.row.no-gutters
-                    h4.golden-awesome.col-1
-                      img(src='assets/images/cart-star.png')
-                    h4.golden-text.col
-                  span.address 
-              #map.col.mt-4
+          .col-lg-12.mb-4.mt-2.col-sm-12
+            h2.golden-text We set out to change the world a little bit for the better.
+            h2.golden-text We’re just trying to do something right.
+          .col-lg-6.col-sm-12
+            p We set out change the world a little bit for the better.
+            p Our sugar free, all-natural formula means we’re not a guilty pleasure, we’re an innocent delight.
+            p Mixing, brewing &amp; blending all-natural ingredients requires masters of their trade and months of rigorus testing and tasting to create the magic formula.
+            p Our sodas not only taste good and look good, we can proudly say our sodas have Zero Sugar, are 100% Natural, Australian Made and only 8 Calories per bottle.
+          .col-lg-6.col-sm-12            
+            p How refreshing is that?
+            p We’ve just started our journey, we’re planning on being leaders in the “better for you space”, with more products that we look forward to sharing with you soon.
+            p In a world where you can be anything, be good to yourself.
     include ../pug-includes/footer.pug
   // Bootstrap core JS
   script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')

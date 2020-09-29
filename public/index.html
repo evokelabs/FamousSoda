@@ -6,7 +6,7 @@
     <meta name="author" content="" />
     <title>Famous Soda</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!--script(src='https://use.fontawesome.com/releases/v5.12.1/js/all.js' crossorigin='anonymous')-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
     <link href="css/styles.min.css" rel="stylesheet" />
     <!-- Start Facebook Pixel Code -->
     <script type="text/javascript">
@@ -381,28 +381,35 @@
             </div>
         </section>
         <div class="gradient gradient-ginger-beer"></div>
-        <section class="soda-section bg-black aligned" id="brand">
-            <div class="container mb-5">
+        <section class="soda-section bg-want-you" id="stores">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 mb-4 mt-2 col-sm-12">
-                        <h2 class="golden-text">We set out to change the world a little bit for the better.</h2>
-                        <h2 class="golden-text">We’re just trying to do something right.</h2>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <p>We set out change the world a little bit for the better.</p>
-                        <p>Our sugar free, all-natural formula means we’re not a guilty pleasure, we’re an innocent delight.</p>
-                        <p>Mixing, brewing &amp; blending all-natural ingredients requires masters of their trade and months of rigorus testing and tasting to create the magic formula.</p>
-                        <p>Our sodas not only taste good and look good, we can proudly say our sodas have Zero Sugar, are 100% Natural, Australian Made and only 8 Calories per bottle.</p>
-                    </div>
-                    <div class="col-lg-6 col-sm-12">
-                        <p>How refreshing is that?</p>
-                        <p>We’ve just started our journey, we’re planning on being leaders in the “better for you space”, with more products that we look forward to sharing with you soon.</p>
-                        <p>In a world where you can be anything, be good to yourself.</p>
+                    <div class="col info">
+                        <h1>STOCKISTS.</h1>
+                        <div class="row">
+                            <div class="col-md-4 col-12 mt-4">
+                                <div class="input-group md-form form-sm form-2 pl-0">
+                                    <input class="form-control my-0 py-1" id="searchTextField" style="flex: none;" type="text" placeholder="POSTCODE OR ADDRESS" aria-label="Search" />
+                                    <div class="append-search golden-awesome">
+                                        <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg
+                                        ><!--i.fa.fa-search(aria-hidden='true')-->
+                                    </div>
+                                </div>
+                                <div id="renderedLocations"></div>
+                                <div class="hidden" id="templateLocation">
+                                    <div class="row no-gutters">
+                                        <h4 class="golden-awesome col-1"><img src="assets/images/cart-star.png" /></h4>
+                                        <h4 class="golden-text col"></h4>
+                                    </div>
+                                    <span class="address"> </span>
+                                </div>
+                            </div>
+                            <div class="col mt-4" id="map"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="gradient gradient-black"></div>
         <section class="soda-section bg-white" id="newsletter">
             <div class="container">
                 <div class="row">
@@ -432,31 +439,24 @@
                 </div>
             </div>
         </section>
-        <section class="soda-section bg-want-you" id="stores">
-            <div class="container">
+        <div class="gradient gradient-white"></div>
+        <section class="soda-section bg-black aligned" id="brand">
+            <div class="container mb-5">
                 <div class="row">
-                    <div class="col info">
-                        <h1>STOCKISTS.</h1>
-                        <div class="row">
-                            <div class="col-md-4 col-12 mt-4">
-                                <div class="input-group md-form form-sm form-2 pl-0">
-                                    <input class="form-control my-0 py-1" id="searchTextField" style="flex: none;" type="text" placeholder="POSTCODE OR ADDRESS" aria-label="Search" />
-                                    <div class="append-search golden-awesome">
-                                        <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg
-                                        ><!--i.fa.fa-search(aria-hidden='true')-->
-                                    </div>
-                                </div>
-                                <div id="renderedLocations"></div>
-                                <div class="hidden" id="templateLocation">
-                                    <div class="row no-gutters">
-                                        <h4 class="golden-awesome col-1"><img src="assets/images/cart-star.png" /></h4>
-                                        <h4 class="golden-text col"></h4>
-                                    </div>
-                                    <span class="address"> </span>
-                                </div>
-                            </div>
-                            <div class="col mt-4" id="map"></div>
-                        </div>
+                    <div class="col-lg-12 mb-4 mt-2 col-sm-12">
+                        <h2 class="golden-text">We set out to change the world a little bit for the better.</h2>
+                        <h2 class="golden-text">We’re just trying to do something right.</h2>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>We set out change the world a little bit for the better.</p>
+                        <p>Our sugar free, all-natural formula means we’re not a guilty pleasure, we’re an innocent delight.</p>
+                        <p>Mixing, brewing &amp; blending all-natural ingredients requires masters of their trade and months of rigorus testing and tasting to create the magic formula.</p>
+                        <p>Our sodas not only taste good and look good, we can proudly say our sodas have Zero Sugar, are 100% Natural, Australian Made and only 8 Calories per bottle.</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <p>How refreshing is that?</p>
+                        <p>We’ve just started our journey, we’re planning on being leaders in the “better for you space”, with more products that we look forward to sharing with you soon.</p>
+                        <p>In a world where you can be anything, be good to yourself.</p>
                     </div>
                 </div>
             </div>

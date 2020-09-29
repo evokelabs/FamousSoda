@@ -316,7 +316,7 @@ var SodaShop = function () {
 		"type": "Pink Lemonade",
 		"title": "Pink Lemonade 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTU4OTAxOTY5MQ==",
-		"price": 49.99,
+		"price": 44.99,
 		"qty": 0
 	}, {
 		"code": "passion-fruit",
@@ -325,7 +325,7 @@ var SodaShop = function () {
 		"type": "Passionfruit Soda",
 		"title": "Passionfruit 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwMjk3ODg1OQ==",
-		"price": 49.99,
+		"price": 44.99,
 		"qty": 0
 	}, {
 		"code": "ginger-beer",
@@ -334,7 +334,7 @@ var SodaShop = function () {
 		"type": "Ginger Beer Soda",
 		"title": "Ginger Beer 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwMzUwMzE0Nw==",
-		"price": 49.99,
+		"price": 44.99,
 		"qty": 0
 	}, {
 		"code": "lemon",
@@ -343,7 +343,7 @@ var SodaShop = function () {
 		"type": "Lemon Soda",
 		"title": "Lemon Soda 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwMzg5NjM2Mw==",
-		"price": 49.99,
+		"price": 44.99,
 		"qty": 0
 	}, {
 		"code": "blood-orange",
@@ -352,7 +352,7 @@ var SodaShop = function () {
 		"type": "Blood Orange",
 		"title": "Blood Orange 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwNzc5NTc1NQ==",
-		"price": 49.99,
+		"price": 44.99,
 		"qty": 0
 	}];
 
