@@ -1,28 +1,48 @@
 #sideShop
-  a.closebtn.cart-close.golden-text &times;
-  div.itemLineCart CART
+  div.cart-title CART
+    a.closebtn.golden-text-x &times;
+  div.line-bottom
   div#cartItems
   div#cartTemplate
     .itemLine.hidden
-      .row.no-gutters.product
-        .col #{name}
-        .col-1.remove &times;
-      .cart-menu
-        .row
-          .col.item 1 item
-          .col.price $4.99
-        .tool.row.no-gutters
-          .col-2
-            button.rem(type='button') -
-          .col-8.total 1
-          .col-2 
-            button.add(type="button") +
-      .spacer
-  div#cartItems
-  div.subTotal
-    h2
-      | Subtotal: &nbsp; &nbsp; &nbsp; 
-      span.amount
+      .row.no-gutters.product.mt-3.mb-3
+        .col-3.align-center
+          img.cart-image(src="assets/images/pink-lemonade-cart.png")
+        .col.cart-menu
+          .row.no-gutters
+            span.bold.title Blood Orange
+            .col.remove &times;            
+          .row.no-gutters.price $44.99
+          .row.no-gutters 12 x 330ml bottles
+          .tool.row.no-gutters
+            .col-3.align-left
+              span.bold QTY
+            .col-1.align-center
+              button.rem(type='button') -
+              //- span.bold -
+            .col-2.align-center
+              span.bold.total 1
+            .col-1.align-center
+              button.add(type="button") +
+              //- span.bold +
+            .col-3
+      .line-bottom
+  .itemLine.subTotal.line-bottom
+    .row.no-gutters.product.mt-2.mb-2
+      .col-3.align-center        
+      .col
+        span.bold Total
+      .col.align-right.mr-4
+        span.amount $44.99
+  //- .row.no-gutters
+  //-   .col-3
+  //-     h2 Total:
+  //-   .col-1
+  //-   .col-2
+  //-   .col-1
+  //-   .col-3
+  //-     span.amount       
+  div.mt-4
     .action-button
       button.btn-gold-button#goToShopify
         span.btn-gold CHECK OUT

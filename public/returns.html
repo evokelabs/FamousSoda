@@ -160,32 +160,40 @@
             </div>
         </nav>
         <div id="sideShop">
-            <a class="closebtn cart-close golden-text">&times;</a>
-            <div class="itemLineCart">CART</div>
+            <div class="cart-title">CART<a class="closebtn golden-text-x">&times;</a></div>
+            <div class="line-bottom"></div>
             <div id="cartItems"></div>
             <div id="cartTemplate">
                 <div class="itemLine hidden">
-                    <div class="row no-gutters product">
-                        <div class="col"></div>
-                        <div class="col-1 remove">&times;</div>
-                    </div>
-                    <div class="cart-menu">
-                        <div class="row">
-                            <div class="col item">1 item</div>
-                            <div class="col price">$4.99</div>
+                    <div class="row no-gutters product mt-3 mb-3">
+                        <div class="col-3 align-center"><img class="cart-image" src="assets/images/pink-lemonade-cart.png" /></div>
+                        <div class="col cart-menu">
+                            <div class="row no-gutters">
+                                <span class="bold title">Blood Orange</span>
+                                <div class="col remove">&times;</div>
+                            </div>
+                            <div class="row no-gutters price">$44.99</div>
+                            <div class="row no-gutters">12 x 330ml bottles</div>
+                            <div class="tool row no-gutters">
+                                <div class="col-3 align-left"><span class="bold">QTY</span></div>
+                                <div class="col-1 align-center"><button class="rem" type="button">-</button></div>
+                                <div class="col-2 align-center"><span class="bold total">1</span></div>
+                                <div class="col-1 align-center"><button class="add" type="button">+</button></div>
+                                <div class="col-3"></div>
+                            </div>
                         </div>
-                        <div class="tool row no-gutters">
-                            <div class="col-2"><button class="rem" type="button">-</button></div>
-                            <div class="col-8 total">1</div>
-                            <div class="col-2"><button class="add" type="button">+</button></div>
-                        </div>
                     </div>
-                    <div class="spacer"></div>
+                    <div class="line-bottom"></div>
                 </div>
             </div>
-            <div id="cartItems"></div>
-            <div class="subTotal">
-                <h2>Subtotal: &nbsp; &nbsp; &nbsp; <span class="amount"></span></h2>
+            <div class="itemLine subTotal line-bottom">
+                <div class="row no-gutters product mt-2 mb-2">
+                    <div class="col-3 align-center"></div>
+                    <div class="col"><span class="bold">Total</span></div>
+                    <div class="col align-right mr-4"><span class="amount">$44.99</span></div>
+                </div>
+            </div>
+            <div class="mt-4">
                 <div class="action-button">
                     <button class="btn-gold-button" id="goToShopify"><span class="btn-gold">CHECK OUT</span></button>
                 </div>
@@ -256,7 +264,7 @@
         <!-- Footer-->
         <footer class="footer">
             <div class="container">
-                <div class="row no-gutters">
+                <div class="row">
                     <div class="col-lg-3 text-lg-left stars">
                         <h4 class="golden-text">THE STARS</h4>
                         <a href="blood-orange.html">Blood Orange</a><br /><a href="pink-lemonade.html">Pink Lemonade</a><br /><a href="passion-fruit.html">Passionfruit</a><br /><a href="ginger-beer.html">Ginger Beer</a><br /><a href="lemon.html">Lemon</a><br /><br />

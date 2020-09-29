@@ -231,7 +231,7 @@ function getViewport() {
 }
 
 function menuSize() {
-	if (getViewport().match(/(lg|xl)/)) return '35%';
+	if (getViewport().match(/(lg|xl)/)) return '45%';
 	return '100%';
 }
 
@@ -321,6 +321,7 @@ var SodaShop = function () {
 		"type": "Pink Lemonade",
 		"title": "Pink Lemonade 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTU4OTAxOTY5MQ==",
+		"image": "pink-lemonade-cart",
 		"price": 44.99,
 		"qty": 0
 	}, {
@@ -330,6 +331,7 @@ var SodaShop = function () {
 		"type": "Passionfruit Soda",
 		"title": "Passionfruit 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwMjk3ODg1OQ==",
+		"image": "passion-fruit-cart",
 		"price": 44.99,
 		"qty": 0
 	}, {
@@ -339,6 +341,7 @@ var SodaShop = function () {
 		"type": "Ginger Beer Soda",
 		"title": "Ginger Beer 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwMzUwMzE0Nw==",
+		"image": "ginger-beer-cart",
 		"price": 44.99,
 		"qty": 0
 	}, {
@@ -348,6 +351,7 @@ var SodaShop = function () {
 		"type": "Lemon Soda",
 		"title": "Lemon Soda 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwMzg5NjM2Mw==",
+		"image": "lemon-cart",
 		"price": 44.99,
 		"qty": 0
 	}, {
@@ -357,6 +361,7 @@ var SodaShop = function () {
 		"type": "Blood Orange",
 		"title": "Blood Orange 330ml Bottles x 12",
 		"variantId": "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTY1NTYwNzc5NTc1NQ==",
+		"image": "blood-orange-cart",
 		"price": 44.99,
 		"qty": 0
 	}];
@@ -381,6 +386,7 @@ var SodaShop = function () {
 		$('#openCart').click(openSideCart)
 		$('#sideShop .closebtn').click(function () {
 			document.getElementById("sideShop").style.width = "0px";
+			document.getElementById("sideShop").className = document.getElementById("sideMenu").className.replace(/(?:^|\s)cart-padding(?!\S)/g, '');
 		})
 
 		$('section .cart-menu .rem').click(function () {
@@ -460,8 +466,9 @@ var SodaShop = function () {
 			var block = $('#cartTemplate .itemLine').clone();
 			block.removeClass('hidden');
 			$('#cartItems').append(block);
-			block.find('.product .col').text(item.name);
-			block.find('.price').text(item.price);
+			block.find('.title').text(item.name);
+			block.find('.cart-image').attr("src", 'assets/images/' + item.image + '.png');
+			block.find('.price').text('$' + item.price);
 			block.find('.total').text(item.qty);
 			block.find('.cart-menu').attr('data-uuid', item.code);
 			$('.cart-menu[data-uuid="' + item.code + '"] .total').text(item.qty);
@@ -511,6 +518,7 @@ var SodaShop = function () {
 		// } else {
 		// cart is full, open it
 		document.getElementById("sideShop").style.width = menuSize();
+		document.getElementById("sideShop").className += "cart-padding";
 		$('#openCart .itemsInCart').text(inCart)
 		setTimeout(function () {
 			$("#goToShopify").css({

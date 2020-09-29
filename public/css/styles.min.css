@@ -10118,23 +10118,23 @@ img::-moz-selection {
 }
 
 .gradient-details-blood-orange {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #f26231);
+  background-image: linear-gradient(#f47d42, #f26231);
 }
 
 .gradient-details-passion-fruit {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #f7b14f);
+  background-image: linear-gradient(#f9ce6f, #f7b14f);
 }
 
 .gradient-details-pink-lemonade {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #ef90a0);
+  background-image: linear-gradient(#f5b1b0, #ef90a0);
 }
 
 .gradient-details-lemon {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #f1d638);
+  background-image: linear-gradient(#ffe76b, #f1d638);
 }
 
 .gradient-details-ginger-beer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #edc37f);
+  background-image: linear-gradient(#f2d196, #edc37f);
 }
 
 .reviews-bg-blood-orange {
@@ -11258,11 +11258,11 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 }
 
 #review-carousel {
-  min-height: 240px;
+  min-height: 210px;
 }
 @media (max-width: 991.98px) {
   #review-carousel {
-    min-height: 400px;
+    min-height: 260px;
   }
 }
 
@@ -11576,7 +11576,6 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   transition: 0.3s;
   opacity: 1;
   cursor: pointer;
-  margin-left: 50px;
 }
 @media (max-width: 991.98px) {
   #sideShop a {
@@ -11586,14 +11585,26 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
     margin-left: 10px;
   }
 }
+#sideShop .golden-text-x {
+  background: -webkit-linear-gradient(30deg, #ba8549 0%, #e3ae58 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#sideShop .closebtn {
+  cursor: pointer;
+  font-size: 3rem;
+  font-family: "Zwizz Regular";
+  line-height: 0.8;
+  color: #818181;
+  display: inline-block;
+  float: right;
+}
 #sideShop a:hover {
   color: black;
 }
 #sideShop .itemLine,
 #sideShop .itemLineCart {
   padding-top: 5px;
-  padding-right: 5px;
-  margin-left: 50px;
   font-family: "Zwizz SemiBold";
   font-size: 1.4rem;
 }
@@ -11610,28 +11621,41 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 #sideShop .itemLine .product .remove,
 #sideShop .itemLineCart .product .remove {
   text-align: right;
-  margin-top: 3pt;
-  margin-right: 3pt;
+  margin-top: 5pt;
   line-height: 0.5;
   font-size: 3rem;
   cursor: pointer;
+  font-family: "Zwizz Regular";
+  font-size: 2.2rem;
 }
-#sideShop .itemLineCart {
-  border-bottom: 2px solid black;
+#sideShop .cart-title {
   font-family: "Zwizz ExtraBold";
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.9rem;
+  display: inline;
+}
+#sideShop .align-center {
+  text-align: center;
+}
+#sideShop .align-right {
+  text-align: right;
+}
+#sideShop .align-left {
+  text-align: left;
+}
+#sideShop .cart-image {
+  display: inline-block;
+}
+#sideShop .bold {
+  font-family: "Zwizz ExtraBold";
+}
+#sideShop .line-bottom {
+  border-bottom: 3px solid black;
 }
 #sideShop .spacer {
   margin: 0;
   padding: 0;
-  height: 2px;
+  height: 3px;
   background-color: black;
-}
-#sideShop .subTotal {
-  margin-left: 50px;
-  position: absolute;
-  bottom: 5pt;
 }
 @media (max-width: 991.98px) {
   #sideShop .subTotal {
@@ -11646,7 +11670,6 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 #sideShop .subTotal h2 {
   font-family: "Zwizz ExtraBold";
   font-size: 1.4rem;
-  text-transform: uppercase;
   line-height: 1.5;
 }
 #sideShop .subTotal .btn-gold {
@@ -11658,7 +11681,28 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 #sideShop button#goToShopify {
   width: auto !important;
 }
+#sideShop button {
+  background-color: transparent;
+  border: 0;
+}
+#sideShop button:focus {
+  outline: 0px !important;
+}
+#sideShop .action-button {
+  text-align: right;
+}
 
+.cart-padding {
+  padding-right: 55px;
+  padding-left: 40px;
+}
+
+@media (max-width: 991.98px) {
+  .cart-padding {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-height: 450px) {
   #sideShop {
     padding-top: 15px;
@@ -11928,9 +11972,10 @@ section.soda-section .hero-image img {
 #brand h2 {
   text-transform: uppercase;
   color: white;
+  font-size: 2.3rem;
 }
 #brand p {
-  color: white;
+  color: black;
 }
 
 @media (min-width: 992px) {
