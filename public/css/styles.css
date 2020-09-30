@@ -10085,6 +10085,14 @@ img::-moz-selection {
   background-image: linear-gradient(#f5b1b0, #edc37f);
 }
 
+.gradient-white-to-cream {
+  background-image: linear-gradient(#fff, #fff8f2);
+}
+
+.gradient-cream-to-white {
+  background-image: linear-gradient(#fff8f2, #fff);
+}
+
 .we-want-you-bg {
   background-image: linear-gradient(90deg, rgba(245, 153, 183, 0) 0%, #f599b7 1%, #f599b7 100%), url("./../assets/images/we-want-you-bg.png");
   background-repeat: no-repeat, repeat;
@@ -10138,23 +10146,23 @@ img::-moz-selection {
 }
 
 .reviews-bg-blood-orange {
-  background: #f26231;
+  background: #f47d42;
 }
 
 .reviews-bg-passion-fruit {
-  background: #f7b14f;
+  background: #f9ce6f;
 }
 
 .reviews-bg-pink-lemonade {
-  background: #ef90a0;
+  background: #f5b1b0;
 }
 
 .reviews-bg-lemon {
-  background: #f1d638;
+  background: #ffe76b;
 }
 
 .reviews-bg-ginger-beer {
-  background: #edc37f;
+  background: #f2d196;
 }
 
 .gradient-whyfamous {
@@ -10295,8 +10303,6 @@ section .cart-menu .btn-gold {
 }
 
 #sideShop .cart-menu {
-  max-width: 300px;
-  min-width: 250px;
   pointer-events: auto;
 }
 #sideShop .cart-menu .item {
@@ -11598,6 +11604,13 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   color: #818181;
   display: inline-block;
   float: right;
+}
+#sideShop .bottle-cross {
+  display: inline-block;
+  float: right;
+}
+#sideShop .justify-space-between {
+  justify-content: space-between;
 }
 #sideShop a:hover {
   color: black;
