@@ -11053,7 +11053,8 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 .footer .container {
   padding: 60pt;
 }
-.footer .stars a, .footer strong {
+.footer .stars a,
+.footer strong {
   font-family: "FSoda-SemiBold";
 }
 .footer a {
@@ -11062,14 +11063,14 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
 .footer h4 {
   font-size: 1.2rem;
 }
-.footer img {
+.footer .footer-logo {
   height: 52.7px;
   margin-top: -38px;
   display: block;
   margin-bottom: 15.5px;
 }
 @media (max-width: 991.98px) {
-  .footer img {
+  .footer .footer-logo {
     display: none;
   }
 }
@@ -11563,6 +11564,9 @@ section.soda-section.aligned:nth-of-type(2) .bubble-bottle-container {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+}
+#sideShop .align-items-center {
+  align-items: center;
 }
 #sideShop .cart-close {
   font-size: 5rem;

@@ -1,19 +1,21 @@
 // Styling for the footer
-.footer {    
+.footer {
     scroll-snap-align: start;
     background-color: black;
     text-align: center;
     font-size: 0.9rem;
     font-family: 'FSoda-Regular';
-    color:white;
+    color: white;
 
     .container {
-        padding:60pt;
+        padding: 60pt;
     }
 
-    .stars a, strong {
+    .stars a,
+    strong {
         font-family: 'FSoda-SemiBold';
     }
+
     a {
         color: white;
     }
@@ -21,14 +23,15 @@
     h4 {
         font-size: 1.2rem;
     }
-    img {
+
+    .footer-logo {
         height: 52.7px;
         margin-top: -38px;
         display: block;
         margin-bottom: 15.5px;
 
         @include media-breakpoint-down(md) {
-            display:none;
+            display: none;
         }
     }
 }
