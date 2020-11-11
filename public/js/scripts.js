@@ -674,18 +674,18 @@ $(window).on("scroll touchmove ready load", function () {
 		if ($(document).scrollTop() > $(".bg-ginger-beer").position().top) {
 			$('#mainNav').css('background-image', "linear-gradient(rgba(237, 195, 127, 0.95), rgba(237, 195, 127,  0.95) 70%, rgba(237, 195, 127,  0.0))");
 		};
-		if ($(document).scrollTop() >= $(".bg-we-want-you").position().top) {
-			$('#mainNav').css('background-image', "linear-gradient(rgba(239, 144, 160, 0.95), rgba(239, 144, 160,  0.95) 70%, rgba(239, 144, 160,  0.0))");
-		};
-		if ($(document).scrollTop() >= $(".bg-black").position().top) {
-			$('#mainNav').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0,  0.95) 70%, rgba(0, 0, 0,  0.0))");
-		};
-		if ($(document).scrollTop() >= $(".bg-white").position().top) {
+		if ($(document).scrollTop() >= $(".bg-want-you").position().top) {
 			$('#mainNav').css('background-image', "linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255,  0.95) 70%, rgba(255, 255, 255,  0.0))");
 		};
-		if ($(document).scrollTop() >= $(".bg-want-you").position().top) {
-			$('#mainNav').css('background-image', "linear-gradient(rgba(255, 248, 242, 0.95), rgba(255, 248, 242,  0.95) 70%, rgba(255, 248, 242,  0.0))");
-		}
+		// if ($(document).scrollTop() >= $(".bg-black").position().top) {
+		// 	$('#mainNav').css('background-image', "linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0,  0.95) 70%, rgba(0, 0, 0,  0.0))");
+		// };
+		// if ($(document).scrollTop() >= $(".bg-white").position().top) {
+		// 	$('#mainNav').css('background-image', "linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255,  0.95) 70%, rgba(255, 255, 255,  0.0))");
+		// };
+		// if ($(document).scrollTop() >= $(".bg-want-you").position().top) {
+		// 	$('#mainNav').css('background-image', "linear-gradient(rgba(255, 248, 242, 0.95), rgba(255, 248, 242,  0.95) 70%, rgba(255, 248, 242,  0.0))");
+		// }
 
 	} else if ($("#details").length) {
 
