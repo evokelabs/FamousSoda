@@ -42,7 +42,7 @@
     "clean-css": "^4.2.3",
     "concurrently": "5.1.0",
     "node-minify": "^3.6.0",
-    "postcss": "7.0.27",
+    "postcss": "7.0.36",
     "prettier": "2.0.4",
     "pug": "2.0.4",
     "sass": "1.26.3",
